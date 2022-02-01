@@ -3,10 +3,13 @@ Mesoscale-to-Microscale Coupling Manual
 
 ***CURRENTLY UNDER CONSTRUCTION***
 
-This documentation describes ongoing work at the National Renewable Energy
-Laboratory (NREL) in mesoscale-to-microscale coupling (MMC). These docs should
-provide a good starting point for performing high-fidelity MMC wind-plant
-simulations using the WRF/SOWFA mesoscale/microscale solvers.
+This documentation describes ongoing work on the Atmosphere to 
+Electrons (A2e) mesoscale-microscale coupling (MMC) project. These 
+docs will provide overviews of the numerical models utilized within 
+the MMC project, information for running various case studies 
+(including model setups, auxiliary input, pre- and post-processing 
+code, and assessment notebooks), and general python utilities that 
+have been developed within this project. 
 
 .. toctree::
    :maxdepth: 3
