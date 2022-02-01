@@ -1,6 +1,5 @@
-# coupling-manual
+# A2e MMC Documentation
 
-Documentation for Mesoscale-to-Microscale Coupling (MMC) capabilities, hosted
-on readthedocs.io, and examples of how to use the tools that have been
-developed. 
+Documentation for the Atmosphere-to-electrons (A2e) Mesoscale-to-Microscale
+Coupling (MMC) project, hosted on readthedocs.io. 
 
