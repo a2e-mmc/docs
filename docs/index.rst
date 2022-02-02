@@ -1,7 +1,8 @@
 Mesoscale-Microscale Coupling Manual
 ====================================
 
-***CURRENTLY UNDER CONSTRUCTION***
+.. note:: 
+  **This site is currently under construction.**
 
 This documentation describes ongoing work on the Atmosphere to 
 Electrons (A2e) mesoscale-microscale coupling (MMC) project. These 
