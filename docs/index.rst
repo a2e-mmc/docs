@@ -1,5 +1,5 @@
-Mesoscale-to-Microscale Coupling Manual
-=======================================
+Mesoscale-Microscale Coupling Manual
+====================================
 
 ***CURRENTLY UNDER CONSTRUCTION***
 
@@ -12,13 +12,13 @@ code, and assessment notebooks), and general python utilities that
 have been developed within this project. 
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 2
    :caption: Contents:
 
-   codes
-   methodology
-   walkthrough
+   overview
+   codes 
    utilities
+   cases
 
 
 .. Indices and tables
