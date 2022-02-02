@@ -8,7 +8,7 @@ Text here...
   :glob:
   :maxdepth: 1
   
-  swift.rst
-  fino.rst
-  wfip2.rst
-  nyserda.rst
+  cases/swift.rst
+  cases/fino.rst
+  cases/wfip2.rst
+  cases/nyserda.rst
