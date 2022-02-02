@@ -4,91 +4,11 @@ Case Studies
 
 Text here...
 
-SWiFT
-=====
-
-Case Overview
--------------
-
-Model Setups
-------------
-
-Validation Data Sources
------------------------
-
-Assessment
-----------
-
-Resulting Publications
-----------------------
-
-
-
-WFIP2
-=====
-
-Case Overview
--------------
-
-Model Setups
-------------
-
-Validation Data Sources
------------------------
-
-Assessment
-----------
-
-Resulting Publications
-----------------------
-
-
-
-
-FINO
-====
-
-Case Overview
--------------
-
-Model Setups
-------------
-
-Validation Data Sources
------------------------
-
-Assessment
-----------
-
-Resulting Publications
-----------------------
-
-
-
-
-
-NYSERDA
-=======
-
-Case Overview
--------------
-
-Model Setups
-------------
-
-Validation Data Sources
------------------------
-
-Assessment
-----------
-
-Resulting Publications
-----------------------
-
-
-
-
-
-
-
-
+.. toctree::
+  :glob:
+  :maxdepth: 1
+  
+  swift.rst
+  fino.rst
+  wfip2.rst
+  nyserda.rst
