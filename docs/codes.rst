@@ -17,6 +17,14 @@ WRF-LES implements a generalized actuator disk and generalized actuator line.
 
 More information: https://www.mmm.ucar.edu/weather-research-and-forecasting-model
 
+MMC-WRF
+-------
+Within the MMC project, several additions have been made to the WRF model for coupling and wind energy related processes.
+This version of WRF is freely available on GitHub: `MMC-WRF <https://github.com/a2e-mmc/WRF>`_
+Included in this version of WRF are several perturbation strategies, enhancements for running idealized cases, adjustments to the tslist functionality, and more.
+This version is also tagged at various stages for particular studies.
+If attempting to re-create results, please make sure you are running on the tagged version for the study of interest.
+
 
 Simulator fOr Wind Farm Applications (SOWFA)
 ============================================
