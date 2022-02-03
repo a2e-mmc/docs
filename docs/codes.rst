@@ -20,11 +20,13 @@ More information: https://www.mmm.ucar.edu/weather-research-and-forecasting-mode
 MMC-WRF
 -------
 Within the MMC project, several additions have been made to the WRF model for coupling and wind energy related processes.
-This version of WRF is freely available on GitHub: `MMC-WRF <https://github.com/a2e-mmc/WRF>`_
 Included in this version of WRF are several perturbation strategies, enhancements for running idealized cases, adjustments to the tslist functionality, and more.
 This version is also tagged at various stages for particular studies.
 If attempting to re-create results, please make sure you are running on the tagged version for the study of interest.
 
+.. admonition:: Download MMC-WRF
+
+   This version of WRF is freely available on GitHub: `MMC-WRF <https://github.com/a2e-mmc/WRF>`_
 
 Simulator fOr Wind Farm Applications (SOWFA)
 ============================================
@@ -37,6 +39,11 @@ the NREL FAST (Fatigue, Aerodynamics, Structures, Turbulence) model provides
 comprehensive aeroservoelastic capabilities.  
 
 More information: https://nwtc.nrel.gov/SOWFA
+
+.. admonition:: Download SOWFA
+
+   This version of SOWFA is freely available on GitHub: `SOWFA <https://github.com/a2e-mmc/SOWFA-models>`_
+
 
 
 Other Codes
