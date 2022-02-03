@@ -39,7 +39,7 @@ Above this point, ∆z stretches to around 420 m at model top.
 .. attention::
   **The WRF setup has not been uploaded to GitHub yet. This is expected soon...**
 
-The WRF setup (including namelists and auxiliary input data) is available on GitHub here: https://github.com/a2e-mmc/WRF-setups
+The WRF setup (including namelists and auxiliary input data) is available on the A2e-MMC GitHub here: https://github.com/a2e-mmc/WRF-setups
 
 Additionally, a setup script is available in which the case will be setup automatically on a user's local environment.
 This allows for easy recreation of the model simulations from this study.
@@ -52,8 +52,9 @@ The 10-minute averaged NYSERDA floating lidar data is freely available at: https
 Assessment
 ----------
 
-.. note:: 
-  The assessment performed in this study is catalogued via Jupyter Notebooks on the A2e-MMC GitHub here: https://github.com/a2e-mmc/assessment/tree/master/studies/NYSERDA
+.. admonition:: View/Download the Assessment Notebooks
+
+   The assessment performed in this study is catalogued via Jupyter Notebooks on the A2e-MMC GitHub here: https://github.com/a2e-mmc/assessment/tree/master/studies/NYSERDA
 
 This study utilizes several auxiliary SST datasets (:numref:`fig-NYSERDA-SST`) and surface parameterizations to determine model sensitivity of the low-level jet (LLJ) to surface temperature and surface characteristics such as roughness.
 The SST datasets vary in resolution and fidelity which can be easily seen by examining the gradients of SST.
@@ -67,9 +68,9 @@ When on the LES domains, the overall differences are generally constrained to su
     Auxiliary SST datasets utilized within this study.
 
 The additional tests that are run include using WRF's sst_skin parameterization, a 1-D ocean mixed-layer model (OMLM), implementing a shallow water roughness parameterization, and changing the land use dataset.
-WRF's sst_skin parameterization (**ADD CITATION HERE**) prognostically calculates diurnal fluctuations in SST.
-The 1-D OMLM model (**ADD CITATION HERE**) adjusts SST based on the gradients of SST and other variables such as wind speed.
-Lastly, the shallow water roughness scheme (**ADD CITATION HERE**) calculates over-water roughness based on bathymetry (for depths between 10 and 100 m).
+WRF's sst_skin parameterization :cite:`zeng2005prognostic` prognostically calculates diurnal fluctuations in SST.
+The 1-D OMLM model :cite:`zi2012new` adjusts SST based on the gradients of SST and other variables such as wind speed.
+Lastly, the shallow water roughness scheme :cite:`jimenez2018need` calculates over-water roughness based on bathymetry (for depths between 10 and 100 m).
 
 Results from the mesoscale simulations show that despite changing the SST dataset, there is very little change in the mean profile of the LLJ (:numref:`fig-NYSERDA-SST_ens` a) resulting in very low spread (:numref:`fig-NYSERDA-SST_ens` b).
 Ensemble mean error also shows a consistent pattern between the SST datasets and auxiliary datasets with the lowest error near the surface and between the observed jet nose and simulated jet nose.
@@ -104,4 +105,9 @@ Resulting Publications
 
 
 
+References
+----------
+
+.. bibliography:: ../references.bib
+   :all:
 
