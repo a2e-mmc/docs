@@ -8,8 +8,8 @@ Case Overview
 Model Setups
 ------------
 
-Validation Data Sources
------------------------
+Data Sources
+------------
 
 Assessment
 ----------
