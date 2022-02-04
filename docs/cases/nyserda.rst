@@ -18,12 +18,12 @@ This is done by performing an ensemble of mesoscale-to-microscale simulations, c
     :width: 400
     :align: center
 
-    Locations of the NYSERDA floating lidar buoys and wind energy leased areas.
+    Locations of the NYSERDA floating lidar buoys and wind energy leased areas. (Image courtesy of Mike Optis.)
 
 Model Setups
 ------------
 
-This setup utilizes 5 inline one-way nests with ∆x,y starting from 6.25 km and nesting down with ratios of 5:1 to 10 m.
+This setup utilizes 5 inline one-way nests with ∆x,y starting from 6.25 km and nesting down with ratios of 5:1 to 10 m (:numref:`fig-NYSERDA-domains`).
 Domains 1 and 2 are both mesoscale domains while domains 3-5 are LES.
 The vertical grid is consistent across all domains with 131 levels.
 Below 400 m, the average ∆z is 10 m.
@@ -39,31 +39,60 @@ Above this point, ∆z stretches to around 420 m at model top.
 .. attention::
   **The WRF setup has not been uploaded to GitHub yet. This is expected soon...**
 
-The WRF setup (including namelists and auxiliary input data) is available on GitHub here: https://github.com/a2e-mmc/WRF-setups
+The WRF setup (including namelists and auxiliary input data) is available on the A2e-MMC GitHub here: https://github.com/a2e-mmc/WRF-setups
 
 Additionally, a setup script is available in which the case will be setup automatically on a user's local environment.
 This allows for easy recreation of the model simulations from this study.
 
-Validation Data Sources
------------------------
+Data Sources
+------------
+Sea surface temperature data is freely available for download at: https://podaac.jpl.nasa.gov/
 The 10-minute averaged NYSERDA floating lidar data is freely available at: https://oswbuoysny.resourcepanorama.dnvgl.com/download/f67d14ad-07ab-4652-16d2-08d71f257da1
 
 Assessment
 ----------
 
-.. note:: 
-  The assessment performed in this study is catalogued via Jupyter Notebooks on the A2e-MMC GitHub here: https://github.com/a2e-mmc/assessment/tree/master/studies/NYSERDA
+.. admonition:: View/Download the Assessment Notebooks
 
-Add some figures here..
+   The assessment performed in this study is catalogued via Jupyter Notebooks on the A2e-MMC GitHub here: https://github.com/a2e-mmc/assessment/tree/master/studies/NYSERDA
 
-blah
-blah
-blah
+This study utilizes several auxiliary SST datasets (:numref:`fig-NYSERDA-SST`) and surface parameterizations to determine model sensitivity of the low-level jet (LLJ) to surface temperature and surface characteristics such as roughness.
+The SST datasets vary in resolution and fidelity which can be easily seen by examining the gradients of SST.
+When on the LES domains, the overall differences are generally constrained to subtle gradients over the domain with a different mean SST.
 
-blah
+  .. _fig-NYSERDA-SST:
+  .. figure:: ../img/NYSERDA_SST.png
+    :width: 500
+    :align: center
 
-blah
+    Auxiliary SST datasets utilized within this study.
 
+The additional tests that are run include using WRF's sst_skin parameterization, a 1-D ocean mixed-layer model (OMLM), implementing a shallow water roughness parameterization, and changing the land use dataset.
+WRF's sst_skin parameterization :cite:`zeng2005prognostic` prognostically calculates diurnal fluctuations in SST.
+The 1-D OMLM model :cite:`zi2012new` adjusts SST based on the gradients of SST and other variables such as wind speed.
+Lastly, the shallow water roughness scheme :cite:`jimenez2018need` calculates over-water roughness based on bathymetry (for depths between 10 and 100 m).
+
+Results from the mesoscale simulations show that despite changing the SST dataset, there is very little change in the mean profile of the LLJ (:numref:`fig-NYSERDA-SST_ens` a) resulting in very low spread (:numref:`fig-NYSERDA-SST_ens` b).
+Ensemble mean error also shows a consistent pattern between the SST datasets and auxiliary datasets with the lowest error near the surface and between the observed jet nose and simulated jet nose.
+
+  .. _fig-NYSERDA-SST_ens:
+  .. figure:: ../img/NYSERDA_SST_sensitivity.png
+    :width: 400
+    :align: center
+
+    Vertical profiles of (a) mean wind speed and (b) ensemble mean error and spread for the mesoscale runs (d02) for the SST cases.
+
+The same can be said for the auxiliary suface feature tests (:numref:`fig-NYSERDA-aux_ens`) in which the vertical profiles of wind speed are very similar for each case resulting in low spread.
+
+  .. _fig-NYSERDA-aux_ens:
+  .. figure:: ../img/NYSERDA_AUX_sensitivity.png
+    :width: 400
+    :align: center
+
+    Vertical profiles of (a) mean wind speed and (b) ensemble mean error and spread for the mesoscale runs (d02) for the auxiliary tests.
+
+.. attention::
+  LES simulations are ongoing. This page will be updated upon completion.
 
 Resulting Publications
 ----------------------
@@ -76,4 +105,9 @@ Resulting Publications
 
 
 
+References
+----------
+
+.. bibliography:: ../references.bib
+   :all:
 
