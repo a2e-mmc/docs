@@ -12,9 +12,9 @@
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #
-# import os
-# import sys
-# sys.path.insert(0, os.path.abspath('.'))
+import os
+import sys
+sys.path.insert(0, os.path.abspath('/Users/hawbecke/Code/Python/mmctools/'))
 
 
 # -- Project information -----------------------------------------------------
@@ -41,6 +41,7 @@ release = u'0.0.1'
 extensions = [
     'sphinx.ext.mathjax',
     'sphinxcontrib.bibtex',
+    'sphinx.ext.autodoc', 'sphinx.ext.coverage', 'sphinx.ext.napoleon',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
