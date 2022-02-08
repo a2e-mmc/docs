@@ -108,6 +108,6 @@ Resulting Publications
 References
 ----------
 
-.. bibliography:: ../zreferences.bib
+.. bibliography:: zcase_references.bib
    :all:
 
