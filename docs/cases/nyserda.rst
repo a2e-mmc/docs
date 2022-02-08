@@ -108,6 +108,6 @@ Resulting Publications
 References
 ----------
 
-.. bibliography:: zcase_references.bib
+.. bibliography:: aardvark.bib
    :all:
 
