@@ -46,15 +46,14 @@ More information: https://nwtc.nrel.gov/SOWFA
 
 
 
-Other Codes
+Exawind
 ===========
 
-Nalu
-----
-An exascale-capable microscale code under current development by NREL and Sandia
-National Laboratories using the Sierra Toolkit and Trilinos solver. MMC
-capabilities from SOWFA will be extended to Nalu in the future.
+AMR-Wind
+--------
+.. todo::
+  **Fill in this section.**
 
-More information: https://nalu.readthedocs.io
+More information: https://amr-wind.readthedocs.io
 
 
