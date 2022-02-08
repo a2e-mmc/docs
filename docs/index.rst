@@ -1,7 +1,8 @@
-Mesoscale-to-Microscale Coupling Manual
-=======================================
+Mesoscale-Microscale Coupling Manual
+====================================
 
-***CURRENTLY UNDER CONSTRUCTION***
+.. note:: 
+  **This site is currently under construction.**
 
 This documentation describes ongoing work on the Atmosphere to 
 Electrons (A2e) mesoscale-microscale coupling (MMC) project. These 
@@ -12,13 +13,13 @@ code, and assessment notebooks), and general python utilities that
 have been developed within this project. 
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 2
    :caption: Contents:
 
-   codes
-   methodology
-   walkthrough
+   overview
+   codes 
    utilities
+   cases
 
 
 .. Indices and tables

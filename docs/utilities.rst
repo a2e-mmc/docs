@@ -6,6 +6,21 @@ Most of the Python utilities referenced here, unless otherwise noted, are part
 of the `NWTC datatools repo <https://github.com/NWTC/datatools>`_ managed by
 Eliot Quon (eliot.quon@nrel.gov).
 
+mmctools
+========
+
+Throughout the MMC project, several functions for analysis and assessment have been developed by the team and shared through `GitHub <https://github.com/a2e-mmc/mmctools/tree/master/mmctools>`_ for the broader community.
+The functions and classes are collectively referred to as **mmctools** and are separated into the following categories:
+
+.. toctree::
+   :maxdepth: 1
+
+   mmctools/measurements 
+   mmctools/coupling 
+   mmctools/wrf
+   mmctools/helper_functions
+   mmctools/plotting
+
 
 WRF to SOWFA Data Conversion
 ============================
@@ -39,3 +54,9 @@ horizontal and vertical points are constant).
 For writing out simple boundaryData, with fields that only vary with time and
 height.
 
+.. Indices and tables
+.. ==================
+.. 
+.. * :ref:`genindex`
+.. * :ref:`modindex`
+.. * :ref:`search`
