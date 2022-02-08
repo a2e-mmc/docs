@@ -73,7 +73,7 @@ pygments_style = None
 
 numfig = True
 
-bibtex_bibfiles = ['references.bib']
+bibtex_bibfiles = ['zreferences.bib']
 
 # -- Options for HTML output -------------------------------------------------
 
