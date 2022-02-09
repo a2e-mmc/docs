@@ -108,6 +108,6 @@ Resulting Publications
 References
 ----------
 
-.. bibliography:: ../references.bib
+.. bibliography:: ../01_references.bib
    :all:
 
