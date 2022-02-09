@@ -73,7 +73,9 @@ pygments_style = None
 
 numfig = True
 
-bibtex_bibfiles = ['zreferences.bib','cases/aardvark.bib']
+#bibtex_bibfiles = ['cases/aardvark.bib']
+bibtex_bibfiles = ['01_references.bib']
+#bibtex_bibfiles = ['zreferences.bib','cases/aardvark.bib']
 
 # -- Options for HTML output -------------------------------------------------
 
