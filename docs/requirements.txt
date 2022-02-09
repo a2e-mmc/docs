@@ -1,4 +1,4 @@
 ipykernel
 nbsphinx
-sphinxcontrib.bibtex<2.0.0
+sphinxcontrib.bibtex==2.4.1
 recommonmark
