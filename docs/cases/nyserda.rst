@@ -26,6 +26,9 @@ This is done by performing an ensemble of mesoscale-to-microscale simulations, c
    - Informs resource assessment strategies in the offshore environment
    - Impacts on Uncertainty Quantification (UQ)
 
+**MMC Techniques Demonstrated**
+ - Ensemble mesoscale modeling and assessing best performers + model sensitivity
+ - Stochastic cell perturbation method with Eckert scaling on LES domains 
 
 Model Setups
 ------------
