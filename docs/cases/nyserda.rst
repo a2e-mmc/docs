@@ -20,6 +20,16 @@ This is done by performing an ensemble of mesoscale-to-microscale simulations, c
 
     Locations of the NYSERDA floating lidar buoys and wind energy leased areas. (Image courtesy of Mike Optis.)
 
+.. admonition:: Relevance for Wind Energy
+
+   - Informs forecasting/operational modeling of wind farm conditions as to what surface forcings are important and at which scale they need to be modeled
+   - Informs resource assessment strategies in the offshore environment
+   - Impacts on Uncertainty Quantification (UQ)
+
+**MMC Techniques Demonstrated**
+ - Ensemble mesoscale modeling and assessing best performers + model sensitivity
+ - Stochastic cell perturbation method with Eckert scaling on LES domains 
+
 Model Setups
 ------------
 
@@ -48,6 +58,37 @@ Data Sources
 ------------
 Sea surface temperature data is freely available for download at: https://podaac.jpl.nasa.gov/
 The 10-minute averaged NYSERDA floating lidar data is freely available at: https://oswbuoysny.resourcepanorama.dnvgl.com/download/f67d14ad-07ab-4652-16d2-08d71f257da1
+
+HPC Runtime Information
+-----------------------
+
+.. list-table:: 
+   :widths: 20 10 15 15 10 20
+   :header-rows: 1
+   :align: center
+
+   * - Simulation
+     - Codebase
+     - HPC Name
+     - Nodes/Procs
+     - Runs 
+     - Time (hr/run) 
+   * - Mesoscale
+     - WRF
+     - Cheyenne
+     - 32 / 36
+     - 1
+     - ~10
+   * - Meso-to-LES
+     - WRF
+     - Cheyenne
+     - 32 / 36
+     - 12
+     - ~10
+
+
+.. note::
+   Meso-to-LES cases are computationally expensive. When all 5 domains are running, Cheyenne is able to get 20 minutes of simulation time in roughly 10 hours of wall clock. Thus, the LES simulation output is the combined output of 12 individual runs that are restarted every 20 minutes of simulation time resulting in a total of 4 hours of simulation.
 
 Assessment
 ----------
