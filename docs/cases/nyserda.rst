@@ -26,9 +26,10 @@ This is done by performing an ensemble of mesoscale-to-microscale simulations, c
    - Informs resource assessment strategies in the offshore environment
    - Impacts on Uncertainty Quantification (UQ)
 
-**MMC Techniques Demonstrated**
- - Ensemble mesoscale modeling and assessing best performers + model sensitivity
- - Stochastic cell perturbation method with Eckert scaling on LES domains 
+.. admonition:: MMC Techniques Demonstrated
+
+   - Ensemble mesoscale modeling and assessing best performers + model sensitivity
+   - Stochastic cell perturbation method with Eckert scaling on LES domains 
 
 Model Setups
 ------------
@@ -46,10 +47,10 @@ Above this point, ∆z stretches to around 420 m at model top.
 
     WRF domain configuration for (a) domains 1-3 and (b) domains 3-5.
 
-.. attention::
-  **The WRF setup has not been uploaded to GitHub yet. This is expected soon...**
+.. admonition::
+   WRF Setup Available
 
-The WRF setup (including namelists and auxiliary input data) is available on the A2e-MMC GitHub here: https://github.com/a2e-mmc/WRF-setups
+   The WRF setup (including namelists and auxiliary input data) is available on the `WRF-setups repository of the A2e-MMC GitHub <https://github.com/a2e-mmc/WRF-setups/tree/master/NYSERDA>`_.
 
 Additionally, a setup script is available in which the case will be setup automatically on a user's local environment.
 This allows for easy recreation of the model simulations from this study.
@@ -57,6 +58,7 @@ This allows for easy recreation of the model simulations from this study.
 Data Sources
 ------------
 Sea surface temperature data is freely available for download at: https://podaac.jpl.nasa.gov/
+
 The 10-minute averaged NYSERDA floating lidar data is freely available at: https://oswbuoysny.resourcepanorama.dnvgl.com/download/f67d14ad-07ab-4652-16d2-08d71f257da1
 
 HPC Runtime Information
@@ -95,7 +97,7 @@ Assessment
 
 .. admonition:: View/Download the Assessment Notebooks
 
-   The assessment performed in this study is catalogued via Jupyter Notebooks on the A2e-MMC GitHub here: https://github.com/a2e-mmc/assessment/tree/master/studies/NYSERDA
+   The assessment performed in this study is catalogued via Jupyter Notebooks on the `Assessment repository of the A2e-MMC GitHub <https://github.com/a2e-mmc/assessment/tree/master/studies/NYSERDA>`_.
 
 This study utilizes several auxiliary SST datasets (:numref:`fig-NYSERDA-SST`) and surface parameterizations to determine model sensitivity of the low-level jet (LLJ) to surface temperature and surface characteristics such as roughness.
 The SST datasets vary in resolution and fidelity which can be easily seen by examining the gradients of SST.
