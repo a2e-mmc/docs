@@ -43,7 +43,8 @@ The vertical grid is consistent across both domains with 50 levels and ∆z ≈ 
 .. attention::
   **The WRF setup has not been uploaded to GitHub yet. This is expected soon...**
 
-Reforecast simulations using the HRRR and HRRRNEST setup are conducted every 12 hours from 00 UTC 10 January 2017 through 12 UTC 19 January 2017.
+The outer domain is initialized using the operational Rapid Refresh (RAP) model.
+Reforecast simulations using the HRRR and HRRRNEST setup are conducted every 12 hours from 00 UTC 10 January 2017 through 12 UTC 19 January 2017 and integrated for 24 hours each.
 The WRF configuration (including input, boundary, and namelist files) is available through the U.S. Department of Energy (DOE) Data Archive and Portal (DAP; http://a2e.energy.gov/data).
 
 
