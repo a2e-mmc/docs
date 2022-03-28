@@ -14,7 +14,7 @@ A main focus of the study is to better understand the horizontal variability in 
 To highlight these aspects of the event, we use ground-based in-situ and remote sensing measurements, in addition to the Weather Research and Forecasting (WRF) model.
 We conduct high-resolution mesoscale (sub-kilometric) simulations using various planetary boundary layer (PBL) parameterizations.
 The impact of the WRF PBL parameterizations on the modeled horizontal variability in meteorological and turbulence quantities will be presented.
-Of particular interest is the performance of a three-dimensional PBL scheme that was recently implemented into WRF :cite:p:`Kosovic2020,Juliano2022,Eghdami2022`.
+Of particular interest is the performance of a three-dimensional PBL scheme that was recently implemented into WRF :cite:p:`Kosovic2020,Juliano2021,Eghdami2022`.
 Additional details about this WFIP2 CAP study may be found in the original report by :cite:t:`Arthur2022`.
 
 .. admonition:: Relevance for Wind Energy
@@ -180,6 +180,16 @@ The overall TKE model biases tend to be negative (underestimation in TKE) for bo
 However, the postitive biases are reduced substantially when using the 3D PBL parameterization.
 The reason for this improvement in TKE prediction is primarily due to the different length scale formulations between MYNN and 3D PBL.
 Further details regarding the observed and modeled turbulence characteristics from this CAP event are reported in :cite:t:`Arthur2022`.
+
+
+Resulting Publications
+----------
+
+Arthur, R. S., Juliano, T. W., Adler, B., Krishnamurthy, R., Lundquist, J. K., Kosović, B., & Jiménez, P. A. (2022). Improved representation of horizontal variability and turbulence in mesoscale simulations of an extended cold-air pool event. *J. Appl. Meteor. Clim.* :cite:t:`Arthur2022`
+
+Juliano, T. W., Kosović, B., Jiménez, P. A., Eghdami, M., Haupt, S. E., & Martilli, A. (2021). “Gray Zone” Simulations using a Three-Dimensional Planetary Boundary Layer Parameterization in the Weather Research and Forecasting Model. *Monthly Weather Review*. :cite:t:`Juliano2021`
+
+Kosović, B., Munoz, P. J., Juliano, T. W., Martilli, A., Eghdami, M., Barros, A. P., & Haupt, S. E. (2020). Three-dimensional planetary boundary layer parameterization for high-resolution mesoscale simulations. In *Journal of Physics: Conference Series* (Vol. 1452, No. 1, p. 012080). IOP Publishing. :cite:t:`Kosovic2020`
 
 
 References
