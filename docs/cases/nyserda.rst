@@ -13,6 +13,7 @@ A targeted simulation period for the LES domains is on April 6 from 00Z to 06Z.
 The goal if this study is to assess how model sensitivities to factors such as sea surface temperature (SST), sea surface roughness, and land use change across scales.
 This is done by performing an ensemble of mesoscale-to-microscale simulations, calculating ensemble statistics and various metrics on each domain, and comparing how these metrics change between the mesoscale domains and microscale domains.
 
+
   .. _fig-NYSERDA-map:
   .. figure:: ../img/NYSERDA.png
     :width: 400
@@ -137,12 +138,12 @@ The same can be said for the auxiliary suface feature tests (:numref:`fig-NYSERD
 .. attention::
   LES simulations are ongoing. This page will be updated upon completion.
 
+.. _pubs:
+
 Resulting Publications
 ----------------------
 
-.. attention::
-  There are currently no publications for this project.
-
+* Hawbecker, Patrick, William Lassman, Jeff Mirocha, Raj K. Rai, Regis Thedin, Matthew Churchfield, Sue Ellen Haupt, and Colleen Kaul. "Offshore Sensitivities across Scales: A NYSERDA Case Study." In *102nd American Meteorological Society Annual Meeting*. AMS, 2022.
 
 
 
