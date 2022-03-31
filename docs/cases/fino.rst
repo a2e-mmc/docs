@@ -9,9 +9,9 @@ This study is centered around the offshore environment near the Alpha Ventus FIN
 
   .. _fig-fino_overview:
   .. figure:: ../img/fino_overview.png
-  :width: 500
-  :align: center
-  Overview of the region where the Alpha Ventus wind farm is located.
+     :width: 500
+     :align: center
+     Overview of the region where the Alpha Ventus wind farm is located.
 
 The goal of this study is to compare different MMC techniques and identify each individual weaknesses and strengths. More specifically, the focus is on a comparison across different information transfer locations and software usage. We use different coupling strategies among different codes and compare mean quantities, as well as turbulence by means of correlation analysis.
 
@@ -136,25 +136,25 @@ The period of interest for this case is 4-hour interval between 01Z and 04Z on M
 
     .. _fig-fino_all_verticalprofiles:
     .. figure:: ../img/fino_all_verticalprofiles.png
-    :width: 800
-    :align: center
-    Ten-minute mean vertical profile comparison across the different codes and techniques. Dots represent observation data.
+       :width: 800
+       :align: center
+       Ten-minute mean vertical profile comparison across the different codes and techniques. Dots represent observation data.
 
 A snapshot of the instantaneous flowfield is shown in :nunref:`fig-fino_all_horizontalSlices_3x3`. The figure shows a 3-by-3 km submdomain region focused on the Southeast corner of the domain, leaving out the fetch region.
 
     .. _fig-fino_all_horizontalSlices_3x3:
     .. figure:: ../img/fino_all_horizontalSlices_3x3.png
-    :width: 500
-    :align: center
-    Instantaneous snapshot of the flowfield as calculated by the different methods.
+       :width: 500
+       :align: center
+       Instantaneous snapshot of the flowfield as calculated by the different methods.
 
 Even thought average quantities and instantaneous flowfield appears similar (with the exception of the control case), a spectral analysis reveals differences in the methods. Power spectral density plots are shown in :nunref:`fig-fino_all_psd`.
 
     .. _fig-fino_all_psd:
-    .. figure:: ../img/fino_all_psd.png
-    :width: 900
-    :align: center
-    Power spectral density results for all methods for all 3 components of the velocity field, at 80 m.
+    .. figure:: ../img/fino_psd.png
+       :width: 900
+       :align: center
+       Power spectral density results for all methods for all 3 components of the velocity field, at 80 m.
 
  The SOWFA case matches the energy content of the observations. Both WRF Mann and the cell perturbation method have higher similar, higher energy content. The energy of the streamwise component is larger than the others, as expected. The control case exhibted little turbulence and the power spectral density plots clearly shows the lack of energy in the flow.
 
