@@ -63,6 +63,9 @@ horizontally homogeneous. The horizontal mean of the LES matches mesoscale profi
 when the horizontal gradients in the mesoscale flow are small.  The resolved turbulence in the microscale is not forced
 with the mesocale forcing term, but it does react to the mean conditions the forcing imposes.
 
+.. admonition::  SOWFA Setup Available
+       The internal-coupled SOWFA setup is available on the `SOWFA-setups repository of 
+       the A2e-MMC GitHub <https://github.com/a2e-mmc/SOWFA-setups/tree/master/offshore_FINO1_intCoupled>`_.
 
 
 Boundary-Coupled Mesoscale to Microscale: WRF-Mesoscale to SOWFA-LES
@@ -79,10 +82,13 @@ use temperature cell perturbations.  Although less simple than the internal-coup
 inhomogeneity is possible.  However, a disadvantage is that there is a significant fetch region where turbulence has to come to a
 properly formed state.
 
+.. admonition::  SOWFA Setup Available
+       The boundary-coupled SOWFA setup is available on the `SOWFA-setups repository of 
+       the A2e-MMC GitHub <https://github.com/a2e-mmc/SOWFA-setups/tree/master/offshore_FINO1_bdCoupled>`_.
 
 
-Boundary-Coupled Mesoscale to Microscale: WRF-Mesoscale to WRF-LES
-------------------------------------------------------------------
+Boundary-Coupled Mesoscale to Microscale: WRF-Mesoscale to WRF-LES, Mann Synthetic Turbulence
+-------------------------------------------------------------------------------------------------
 
 This last case couples a mesoscale model with a microscale model all within one code, WRF.  The finest simulaton nests
 are treated with LES, whereas the coarser nests use typical mesoscale turbulence modeling.  Coupling of information is through
@@ -96,9 +102,14 @@ boundary-layer height on the lateral side of the domain in 10 seconds interval.Â
 
 
 
+Boundary-Coupled Mesoscale to Microscale: WRF-Mesoscale to WRF-LES, Cell Perturbation Method
+--------------------------------------------------------------------------------------------
 
 
 
+
+Boundary-Coupled Mesoscale to Microscale: WRF-Mesoscale to WRF-LES, Control
+---------------------------------------------------------------------------
 
 
 
@@ -133,26 +144,26 @@ HPC Runtime information
    * - Mesoscale
      - WRF
      - Cheyenne
-     - 32 / 36
+     - 32 / 1152
      - ~0.5
    * - WRF Mann
      - WRF
-     - Eagle
-     - xx / yy
-     - ~xx
+     - NREL's Eagle
+     - 8 / 288
+     - ~6
    * - WRF CPM
      - WRF
-     - PNNL HPC
-     - xx / yy
-     - ~xx
+     - LLNL Quartz
+     - 10 / 360
+     - ~12
    * - WRF Control
      - WRF
-     - PNNL HPC
+     - LLNL's Quartz
      - xx / yy
      - ~xx
    * - SOWFA Int Coupled
      - SOWFA
-     - Eagle
+     - NREL's Eagle
      - 10 / 360
      - ~7
 
