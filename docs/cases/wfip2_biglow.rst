@@ -42,13 +42,12 @@ The setup of this case involves a few different aspects we will go over in this 
 
 The domain extents are shown in :numref:`fig-wfip2_biglow_domain`. We model a 30 x 30 km region. In order to map terrain-conforming mesoscale data to a terrain-conforming microscale domain, we create the grid in steps, illustrated in :numref:`fig-wfip_biglow_mesh`. First, we create a coarse LES grid that conforms to a geometry STL file, thus having the bottom boundary points matching the locations of the bottom boundary points from the mesoscale domain. After that step, the quantities are mapped from the mesoscale domain onto the microscale. Next, the grid is refined to an appropriate level for turbulence-resolving large-eddy simulation. Additional local refinement regions around turbines can be added to the domain if desired. Finally, the higher resolution grid is conformed to the high-resolution STL geometry once again. The last step conforms the grid to the topographic details that were missing from the first step. This approach is needed to ensure WRF data exist at all point at the bottom boundary for proper mapping.
 
-
   .. _fig-wfip2_biglow_mesh:
   .. figure:: ../img/wfip2_biglow_mesh.png
-     :width: 700
+     :width: 800
      :align: center
 
-    Grid strategy for the microscale simulations. Bottom boundary shown on top. First image shows a coarse grid conformed to terrain, matching mesoscale grid size; In the second image, refinements bring the grid to desired resolution; Third image, local refinement zones can be included around turbines; And in the last image, the higher resolution grid is conformed again to the high-resolution terrain geometry.
+     Grid strategy for the microscale simulations. Bottom boundary shown on top. First image shows a coarse grid conformed to terrain, matching mesoscale grid size; In the second image, refinements bring the grid to desired resolution; Third image, local refinement zones can be included around turbines; And in the last image, the higher resolution grid is conformed again to the high-resolution terrain geometry.
 
 The goal is to include all 217 turbines from the Biglow Canyon wind farm on the microscale simulation. Refinement zones near the turbines are needed to better capture their wake. :numref:`fig-wfip2_biglow_turbines` shows a close-up view of the turbines and their refinements upstream and downstream the rotor.
 
@@ -58,10 +57,10 @@ The goal is to include all 217 turbines from the Biglow Canyon wind farm on the 
 
   .. _fig-wfip2_biglow_turbines:
   .. figure:: ../img/wfip2_biglow_turbines.png
-     :width: 500
+     :width: 700
      :align: center
 
-  Close-up view of the turbines at the Biglow Canyon wind farm. The shaded area represents a grid refinement surrounding the turbine. The refinements are usually aligned with the wind direction to capture the turbine's wake.
+     Close-up view of the turbines at the Biglow Canyon wind farm. The shaded area represents a grid refinement surrounding the turbine. The refinements are usually aligned with the wind direction to capture the turbine's wake.
 
 
 Gravity waves usually appear in the period of interest. The waves are organized perturbations in the vertical velocity component.  The perturbation can reflect at the top boudary and create spurious turbulence that leads to numerical instabilities and unphysical flowfield. To prevent that, we use Rayleigh damping zones near the top of the domain.
@@ -113,7 +112,7 @@ Preliminary mesoscale-coupled simulations are presented in terms of flowfield vi
 
   .. _fig-wfip2_biglow_domainturbine:
   .. figure:: ../img/wfip2_biglow_domainturbine.png
-     :width: 700
+     :width: 800
      :align: center
 
      Zoomed domain with two Siemens turbines considered for preliminary results.
@@ -122,7 +121,7 @@ The results of the domains shown above is presented next in :numref:`fig-wfip2_b
 
   .. _fig-wfip2_biglow_flow:
   .. figure:: ../img/wfip2_biglow_flow.png
-     :width: 500
+     :width: 800
      :align: center
 
      Wind speed over the 30x30 km region of interest around the Biglow Canyon wind farm shown in the left panel. The right panel shows a snapshot for the smaller case containing two Siemens turbines.
