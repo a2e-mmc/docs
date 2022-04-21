@@ -42,7 +42,7 @@ More information: https://nwtc.nrel.gov/SOWFA
 
 .. admonition:: Download SOWFA
 
-   This version of SOWFA is freely available on GitHub: `SOWFA <https://github.com/a2e-mmc/SOWFA-models>`_
+   SOWFA is freely available on GitHub: `SOWFA-6 <https://github.com/NREL/SOWFA-6/tree/dev>`_. SOWFA-6 depends on `OpenFOAM-6 <https://github.com/OpenFOAM/OpenFOAM-6>`_. To use wind turbine aeroelastic coupling, `OpenFAST <https://github.com/OpenFAST/openfast>`_ is required.  
 
 
 
