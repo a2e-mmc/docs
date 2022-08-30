@@ -19,10 +19,6 @@ SWiFT Diurnal cycle coupling - Standalone / Offline
 
 
 
-SWiFT pertubation case wind ramp+actuator disk
-----------------------------------------------
-
-
 Data Sources
 ============
 
