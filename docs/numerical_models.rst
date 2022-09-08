@@ -28,6 +28,19 @@ If attempting to re-create results, please make sure you are running on the tagg
 
    This version of WRF is freely available on GitHub: `MMC-WRF <https://github.com/a2e-mmc/WRF>`_
 
+Community Survey
+----------------
+We conducted a survey to better understand how WRF is being used for
+wind-energy applications. More specifically, the goal of the survey was to
+provide guidance on best practices, identify aspects of model usage in need of
+further investigation, and gain insight into barriers experienced by
+wind-energy modeling teams in the use of WRF for their research.
+
+For survey questions, results, and discussion including research opportunities,
+see:
+
+Colleen Kaul. WRF Modeling Practices for Wind Energy: Current Status and Future Needs. Technical Report PNNL-xxxxx, Pacific Northwest National Laboratory, 2022.
+
 Simulator fOr Wind Farm Applications (SOWFA)
 ============================================
 SOWFA is a set of CFD tools developed at the National Renewable Energy Laboratory (NREL) based on
@@ -55,5 +68,4 @@ AMR-Wind
   **Fill in this section.**
 
 More information: https://amr-wind.readthedocs.io
-
 
