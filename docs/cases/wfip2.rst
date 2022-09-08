@@ -195,5 +195,5 @@ Kosović, B., Munoz, P. J., Juliano, T. W., Martilli, A., Eghdami, M., Barros, A
 References
 ----------
 
-.. bibliography:: ../wfip2_bib.bib
+.. bibliography:: wfip2.bib
    :all:
