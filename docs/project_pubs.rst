@@ -8,6 +8,7 @@ Project Publications
 
 .. bibliography:: all_project_pubs.bib
     :all:
+    :list: enumerated
     :labelprefix: A
     :keyprefix: master-
 

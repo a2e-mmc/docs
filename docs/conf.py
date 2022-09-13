@@ -40,11 +40,12 @@ release = u'0.0.1'
 # ones.
 extensions = [
     'sphinx.ext.mathjax',
+    'sphinx.ext.todo',
     'sphinxcontrib.bibtex',
+    # for mmctools documentation:
     'sphinx.ext.autodoc', 
     'sphinx.ext.coverage', 
     'sphinx.ext.napoleon',
-    'sphinx_rtd_theme',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -80,7 +81,7 @@ numfig = True
 bibtex_bibfiles = [
     'all_project_pubs.bib',
     '01_references.bib',
-    'cases/wfip2.bib',
+    'cases/wfip2_refs.bib'
 ]
 
 # -- Options for HTML output -------------------------------------------------

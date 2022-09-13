@@ -192,5 +192,5 @@ References
 
 .. rubric:: Other
 
-.. bibliography:: wfip2.bib
+.. bibliography:: wfip2_refs.bib
 
