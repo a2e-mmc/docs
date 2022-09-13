@@ -21,7 +21,7 @@ This is done by performing an ensemble of mesoscale-to-microscale simulations, c
 
     Locations of the NYSERDA floating lidar buoys and wind energy leased areas. (Image courtesy of Mike Optis.)
 
-.. admonition:: Relevance for Wind Energy
+.. admonition:: Relevance to Wind Energy
 
    - Informs forecasting/operational modeling of wind farm conditions as to what surface forcings are important and at which scale they need to be modeled
    - Informs resource assessment strategies in the offshore environment

@@ -17,7 +17,7 @@ The impact of the WRF PBL parameterizations on the modeled horizontal variabilit
 Of particular interest is the performance of a three-dimensional PBL scheme that was recently implemented into WRF :cite:p:`Kosovic2020,Juliano2021,Eghdami2022`.
 Additional details about this WFIP2 CAP study may be found in the original report by :cite:t:`Arthur2022`.
 
-.. admonition:: Relevance for Wind Energy
+.. admonition:: Relevance to Wind Energy
 
    - Informs low wind energy production scenarios in complex terrain during stable conditions
    - Highlights the need for more comprehensive PBL parameterizations to reduce wind prediction errors
