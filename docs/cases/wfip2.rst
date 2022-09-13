@@ -28,7 +28,7 @@ Additional details about this WFIP2 CAP study may be found in the original repor
 
 
 Model Setup
-------------
+-----------
 This study utilizes two nested domains (one-way coupling) with ∆x,y = 3 km in the outer domain (d01) and 750 m in the inner domain (d02) (:numref:`fig-WFIP2-domains`).
 Domains 1 and 2 are both mesoscale domains, i.e. they both use a PBL parameterization.
 The vertical grid is consistent across both domains with 50 levels and ∆z ≈ 15 m near the surface before stretching above.
@@ -49,7 +49,7 @@ The WRF configuration (including input, boundary, and namelist files) is availab
 
 
 Sensitivity Tests
-------------
+-----------------
 Here, we focus on two WRF configurations from :cite:t:`Arthur2022`, which are listed in :numref:`table-1`.
 
 .. _table-1:
@@ -182,18 +182,15 @@ The reason for this improvement in TKE prediction is primarily due to the differ
 Further details regarding the observed and modeled turbulence characteristics from this CAP event are reported in :cite:t:`Arthur2022`.
 
 
-Resulting Publications
-----------
-
-Arthur, R. S., Juliano, T. W., Adler, B., Krishnamurthy, R., Lundquist, J. K., Kosović, B., & Jiménez, P. A. (2022). Improved representation of horizontal variability and turbulence in mesoscale simulations of an extended cold-air pool event. *J. Appl. Meteor. Clim.* :cite:t:`Arthur2022`
-
-Juliano, T. W., Kosović, B., Jiménez, P. A., Eghdami, M., Haupt, S. E., & Martilli, A. (2021). “Gray Zone” Simulations using a Three-Dimensional Planetary Boundary Layer Parameterization in the Weather Research and Forecasting Model. *Monthly Weather Review*. :cite:t:`Juliano2021`
-
-Kosović, B., Munoz, P. J., Juliano, T. W., Martilli, A., Eghdami, M., Barros, A. P., & Haupt, S. E. (2020). Three-dimensional planetary boundary layer parameterization for high-resolution mesoscale simulations. In *Journal of Physics: Conference Series* (Vol. 1452, No. 1, p. 012080). IOP Publishing. :cite:t:`Kosovic2020`
-
-
 References
 ----------
 
+.. rubric:: Resulting Publications
+
+.. bibliography:: ../all_project_pubs.bib
+    :filter: mmc_rtd_section % "WFIP2"
+
+.. rubric:: Other
+
 .. bibliography:: wfip2.bib
-   :all:
+
