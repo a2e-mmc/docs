@@ -140,18 +140,16 @@ The same can be said for the auxiliary suface feature tests (:numref:`fig-NYSERD
 
 .. _pubs:
 
-Resulting Publications
-----------------------
-
-* Hawbecker, Patrick, William Lassman, Jeff Mirocha, Raj K. Rai, Regis Thedin, Matthew Churchfield, Sue Ellen Haupt, and Colleen Kaul. "Offshore Sensitivities across Scales: A NYSERDA Case Study." In *102nd American Meteorological Society Annual Meeting*. AMS, 2022.
-
-
-
-
 
 References
 ----------
 
-.. bibliography:: ../01_references.bib
-   :all:
+.. rubric:: Resulting Publications
+
+.. bibliography:: ../all_project_pubs.bib
+    :filter: mmc_rtd_section % "NYSERDA"
+
+.. rubric:: Other
+
+.. bibliography:: nyserda_refs.bib
 
