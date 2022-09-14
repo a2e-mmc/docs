@@ -14,7 +14,6 @@ have been developed within this project.
    :caption: Contents:
 
    overview
-   methodology
    cases
    numerical_models
    code_contributions	
