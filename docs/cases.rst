@@ -19,6 +19,7 @@ Several case studies have been conducted within the MMC project ranging from ons
   :maxdepth: 1
   
   cases/swift.rst
-  cases/fino.rst
   cases/wfip2.rst
+  cases/wfip2_biglow.rst
+  cases/fino.rst
   cases/nyserda.rst

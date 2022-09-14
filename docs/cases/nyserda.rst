@@ -13,12 +13,24 @@ A targeted simulation period for the LES domains is on April 6 from 00Z to 06Z.
 The goal if this study is to assess how model sensitivities to factors such as sea surface temperature (SST), sea surface roughness, and land use change across scales.
 This is done by performing an ensemble of mesoscale-to-microscale simulations, calculating ensemble statistics and various metrics on each domain, and comparing how these metrics change between the mesoscale domains and microscale domains.
 
+
   .. _fig-NYSERDA-map:
   .. figure:: ../img/NYSERDA.png
     :width: 400
     :align: center
 
     Locations of the NYSERDA floating lidar buoys and wind energy leased areas. (Image courtesy of Mike Optis.)
+
+.. admonition:: Relevance to Wind Energy
+
+   - Informs forecasting/operational modeling of wind farm conditions as to what surface forcings are important and at which scale they need to be modeled
+   - Informs resource assessment strategies in the offshore environment
+   - Impacts on Uncertainty Quantification (UQ)
+
+.. admonition:: MMC Techniques Demonstrated
+
+   - Ensemble mesoscale modeling and assessing best performers + model sensitivity
+   - Stochastic cell perturbation method with Eckert scaling on LES domains 
 
 Model Setups
 ------------
@@ -36,10 +48,11 @@ Above this point, ∆z stretches to around 420 m at model top.
 
     WRF domain configuration for (a) domains 1-3 and (b) domains 3-5.
 
-.. attention::
-  **The WRF setup has not been uploaded to GitHub yet. This is expected soon...**
+.. admonition::
+   WRF Setup Available
 
-The WRF setup (including namelists and auxiliary input data) is available on the A2e-MMC GitHub here: https://github.com/a2e-mmc/WRF-setups
+   The WRF setup (including namelists and auxiliary input data) is available on the `WRF-setups
+   repository of the A2e-MMC GitHub <https://github.com/a2e-mmc/WRF-setups/tree/master/NYSERDA>`_.
 
 Additionally, a setup script is available in which the case will be setup automatically on a user's local environment.
 This allows for easy recreation of the model simulations from this study.
@@ -47,14 +60,48 @@ This allows for easy recreation of the model simulations from this study.
 Data Sources
 ------------
 Sea surface temperature data is freely available for download at: https://podaac.jpl.nasa.gov/
+
 The 10-minute averaged NYSERDA floating lidar data is freely available at: https://oswbuoysny.resourcepanorama.dnvgl.com/download/f67d14ad-07ab-4652-16d2-08d71f257da1
+
+HPC Runtime Information
+-----------------------
+
+.. list-table:: 
+   :widths: 20 10 15 15 10 20
+   :header-rows: 1
+   :align: center
+
+   * - Simulation
+     - Codebase
+     - HPC Name
+     - Nodes/Procs
+     - Runs 
+     - Time (hr/run) 
+   * - Mesoscale
+     - WRF
+     - Cheyenne
+     - 32 / 36
+     - 1
+     - ~10
+   * - Meso-to-LES
+     - WRF
+     - Cheyenne
+     - 32 / 36
+     - 12
+     - ~10
+
+
+.. note::
+   Meso-to-LES cases are computationally expensive. When all 5 domains are running, Cheyenne is able to get 20 minutes of simulation time in roughly 10 hours of wall clock. Thus, the LES simulation output is the combined output of 12 individual runs that are restarted every 20 minutes of simulation time resulting in a total of 4 hours of simulation.
 
 Assessment
 ----------
 
 .. admonition:: View/Download the Assessment Notebooks
 
-   The assessment performed in this study is catalogued via Jupyter Notebooks on the A2e-MMC GitHub here: https://github.com/a2e-mmc/assessment/tree/master/studies/NYSERDA
+   The assessment performed in this study is catalogued via Jupyter Notebooks on the `Assessment
+   repository of the A2e-MMC GitHub
+   <https://github.com/a2e-mmc/assessment/tree/master/studies/NYSERDA>`_.
 
 This study utilizes several auxiliary SST datasets (:numref:`fig-NYSERDA-SST`) and surface parameterizations to determine model sensitivity of the low-level jet (LLJ) to surface temperature and surface characteristics such as roughness.
 The SST datasets vary in resolution and fidelity which can be easily seen by examining the gradients of SST.
@@ -94,20 +141,18 @@ The same can be said for the auxiliary suface feature tests (:numref:`fig-NYSERD
 .. attention::
   LES simulations are ongoing. This page will be updated upon completion.
 
-Resulting Publications
-----------------------
-
-.. attention::
-  There are currently no publications for this project.
-
-
-
-
+.. _pubs:
 
 
 References
 ----------
 
-.. bibliography:: aardvark.bib
-   :all:
+.. rubric:: Resulting Publications
+
+.. bibliography:: ../all_project_pubs.bib
+    :filter: mmc_rtd_section % "NYSERDA"
+
+.. rubric:: Other
+
+.. bibliography:: nyserda_refs.bib
 

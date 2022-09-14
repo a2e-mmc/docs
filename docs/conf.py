@@ -16,6 +16,10 @@ import os
 import sys
 sys.path.insert(0, os.path.abspath('/Users/hawbecke/Code/Python/mmctools/'))
 
+import pybtex.plugin
+from pybtex.style.formatting.alpha import Style as AlphaStyle
+from pybtex.style.labels.alpha import LabelStyle as AlphaLabels
+
 
 # -- Project information -----------------------------------------------------
 
@@ -40,8 +44,12 @@ release = u'0.0.1'
 # ones.
 extensions = [
     'sphinx.ext.mathjax',
+    'sphinx.ext.todo',
     'sphinxcontrib.bibtex',
-    'sphinx.ext.autodoc', 'sphinx.ext.coverage', 'sphinx.ext.napoleon',
+    # for mmctools documentation:
+    'sphinx.ext.autodoc', 
+    'sphinx.ext.coverage', 
+    'sphinx.ext.napoleon',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -61,7 +69,7 @@ master_doc = 'index'
 #
 # This is also used if you do content translation via gettext catalogs.
 # Usually you set "language" from the command line for these cases.
-language = None
+language = 'en'
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
@@ -73,7 +81,31 @@ pygments_style = None
 
 numfig = True
 
-bibtex_bibfiles = ['zreferences.bib','cases/aardvark.bib']
+#bibtex_bibfiles = ['cases/aardvark.bib']
+bibtex_bibfiles = [
+    'all_project_pubs.bib',
+    'code_refs.bib',
+    #'modeling_refs.bib',
+    'cases/nyserda_refs.bib',
+    'cases/swift_refs.bib',
+    'cases/wfip2_refs.bib'
+]
+bibtex_reference_style = 'author_year'
+#bibtex_reference_style = 'super'
+#bibtex_reference_style = 'label'
+#bibtex_default_style = 'plain' # duplicate numeric labels everywhere
+#bibtex_default_style = 'unsrt'
+
+class KeyLabels(AlphaLabels):
+    def format_label(self, entry):
+        return entry.key
+
+class MMCStyle(AlphaStyle):
+    default_label_style = 'keys'
+
+pybtex.plugin.register_plugin('pybtex.style.labels', 'keys', KeyLabels)
+pybtex.plugin.register_plugin('pybtex.style.formatting', 'mmcstyle', MMCStyle)
+bibtex_default_style = 'mmcstyle'
 
 # -- Options for HTML output -------------------------------------------------
 
