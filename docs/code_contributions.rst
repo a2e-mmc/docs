@@ -347,13 +347,120 @@ and two-point statistics on a fine mesh (10 m), with and without perturbations. 
 turbulence enrichment methodology (Gabor Kinematic Simulation) were both found to be similarly
 effective in this study.
 
+
+Three-Dimensional Planetary Boundary Layer (PBL) Parameterization
+=================================================================
+
+Parameterization description
+----------------------------
+
+Led by MMC team members Branko Kosović, Pedro Jimenez, and Timothy Juliano, a three-dimensional (3D)
+planetary boundary layer (PBL) parameterization based on the Mellor-Yamada (MY) framework was
+implemented into the Weather Research and Forecasting (WRF) model. The MY model is fundamentally
+rooted in the Reynolds Averaged Navier-Stokes (RANS) equations. Motivation for the 3D PBL
+parameterization stems from the assumption of horizontal homogeneity made by traditional 1D PBL
+parameterizations. This fundamental assumption becomes unreasonable for high-resolution (horizontal
+grid cell spacing, Δ≈100-1000m) mesoscale simulations due to the increasing importance of horizontal
+variability in surface forcing. In this modeling regime, nicknamed the *Terra Incognita* by :cite:t:`Wyngaard2004` and sometimes referred to as the gray zone, turbulence is neither fully parameterized
+(as in the mesoscale limit) nor fully resolved (large-eddy simulation, or LES, limit).
+
+The main challenge that most 1D PBL parameterizations face in the gray zone is that the horizontal
+homogeneity assumption ignores all horizontal gradients, in addition to the vertical gradient in
+vertical velocity. As a result, only the vertical turbulent stresses and fluxes are parameterized,
+and they are computed based on only the vertical gradients. However, at gray zone resolutions, the
+ratio of horizontal to vertical shear may be as large as 0.2 :cite:p:`Kosovic2021`, suggesting
+horizontal gradients should be considered when computing turbulent stresses and fluxes. Furthermore,
+1D PBL schemes do not compute horizontal flux divergences, but rather horizontal diffusion is
+introduced (typically using a 2D Smagorinsky-type approach) to maintain numerical stability
+:cite:p:`Smagorinsky1993`. Under unstable conditions, spurious convective structures often manifest
+due to the inability of 1D PBL schemes to accurately represent turbulence (e.g., Ching et al. 2014).
+To address this gray zone modeling challenge, the 3D PBL scheme implemented by the MMC team does not
+make the horizontal homogeneity assumption, and therefore it more accurately models turbulent PBL
+flow.
+
+The 3D PBL parameterization was implemented into the WRF model in a similar fashion as the turbulent
+kinetic energy (TKE)-based LES subgrid-scale (SGS) model of :cite:t:`Deardorff1980`. Most of the 3D
+PBL code is self-contained in two modules within WRF’s dynamics (``dyn_em`` directory):
+``module_pbl3d.F`` and ``module_pbl3d_my.F``. The first module (``module_pbl3d.F``) acts as the
+driver for the parameterization, while the second module (`module_pbl3d_my.F`) contains the MY
+model. First, the driver computes the 3D gradients of the 3D wind components and scalar quantities
+(potential temperature and water vapor mixing ratio; however, the model can be extended to other
+scalars). Then, this information is passed into the MY model to compute all six turbulent stress
+components, as well as the 3D turbulent fluxes for each scalar. All of the turbulent fluxes are
+passed back into the driver, where the turbulent stress and flux divergences are computed and added
+to the right-hand side of the respective prognostic equations. More details about the
+parameterization methodology, in addition to various idealized and real cases, may be found in
+:cite:t:`Kosovic2020,Juliano2022,Eghdami2022,Arthur2022,Rybchuk2021wesd`.
+
+
+WRF namelist options and example
+--------------------------------
+
+Several new namelist options specific to the 3D PBL parameterization have been added to the WRF
+model. These namelist options are detailed in run/README.namelist and reproduced here: 
+
+.. _inputs_3DPBL:
+.. figure:: img/3DPBL_namelist.png
+  :width: 800
+  :align: center
+
+  WRF namelist.input options and descriptions for the 3D PBL parameterization
+
+The following example namelist options are shown for three different 3D PBL configurations ran for
+an idealized convective seabreeze case, as reported in :cite:t:`Juliano2022`.
+
+ =================== ======== =========== ========= 
+ &dynamics           "SMAG"   "3D-APPROX" "3D-FULL" 
+ =================== ======== =========== ========= 
+ ``pbl3d_opt``         -1          1          2     
+ ``pbl3d_prog``         1          1          1     
+ ``pbl3d_nsteps``       1          1          1     
+ ``pbl3d_sfc_opt``      1          1          1     
+ ``pbl3d_l_opt``        3          3          3     
+ ``pbl3d_constants`` 'Boulac'   'Boulac'   'Boulac' 
+ =================== ======== =========== ========= 
+
+An example result from these seabreeze simulations is now shown (reproduced from
+:cite:t:`Juliano2022`). Results from these three 3D PBL configurations are compared with a 20-member
+LES ensemble because we expect that the 3D PBL results represent the ensemble mean (RANS) solution
+(i.e., the turbulence should be fully parameterized and thus the resolved flow should be
+nonturbulent according to :cite:t:`Wyngaard2004`). Further discussion may be found in
+:cite:t:`Juliano2022`.
+
+.. _3DPBL_slices:
+.. figure:: img/3DPBL_slices.png
+  :width: 800
+  :align: center
+
+  Horizontal slices of vertical velocity (w, units of m/s) at 100 m above sea level and t = 345 min
+  for three different 3D PBL configurations (Δ = 250 m) of the seabreeze case. Figure is reproduced
+  from :cite:t:`Juliano2022` (their Fig. 15).
+
+The impact of the turbulence closure/mixing approach (controlled by namelist option ``pbl3d_opt``)
+is evident in :numref:`inputs_3DPBL`: the “SMAG” and “3D-APPROX” setups – neither of which
+account for horizontal gradients – produce spurious convective structures to the east of the sea
+breeze front (manifested as the north-south oriented strip of positive vertical velocity at ~25 km).
+Over this land region, the surface heating is horizontally homogeneous, and thus one would expect to
+see no organized structures. However, in the “3D-FULL” setup, which does consider horizontal
+gradients, spurious convective structures are not evident. The “3D-FULL” configuration is much
+closer to the LES ensemble, which shows very little organized structure to the east of the sea
+breeze front.  Therefore, this example illustrates the important role that horizontal gradients play
+at gray zone resolutions and under convective conditions.
+
+
+.. admonition:: Code Access
+
+    The WRF model code that contains the `3D PBL parameterization
+    <https://github.com/twjuliano/WRF/tree/develop_3dpbl_on_top>`_ is publicly available on GitHub.
+
+
 References
 ==========
 
 .. rubric:: Resulting Publications
 
 .. bibliography:: all_project_pubs.bib
-    :filter: mmc_rtd_section % "perts"
+    :filter: (mmc_rtd_section % "perts") or (mmc_rtd_section % "dev")
 
 .. rubric:: Other
 

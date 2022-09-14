@@ -14,7 +14,7 @@ A main focus of the study is to better understand the horizontal variability in 
 To highlight these aspects of the event, we use ground-based in-situ and remote sensing measurements, in addition to the Weather Research and Forecasting (WRF) model.
 We conduct high-resolution mesoscale (sub-kilometric) simulations using various planetary boundary layer (PBL) parameterizations.
 The impact of the WRF PBL parameterizations on the modeled horizontal variability in meteorological and turbulence quantities will be presented.
-Of particular interest is the performance of a three-dimensional PBL scheme that was recently implemented into WRF :cite:p:`Kosovic2020,Juliano2021,Eghdami2022`.
+Of particular interest is the performance of a three-dimensional PBL scheme that was recently implemented into WRF :cite:p:`Kosovic2020,Juliano2022,Eghdami2022`.
 Additional details about this WFIP2 CAP study may be found in the original report by :cite:t:`Arthur2022`.
 
 .. admonition:: Relevance to Wind Energy
