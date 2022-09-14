@@ -23,28 +23,32 @@ We use different coupling strategies among different codes and compare mean quan
 means of correlation analysis.
 
 .. admonition:: Relevance to wind energy
+
     - Low roughness of the offshore environment and lack of terrain produces low-turbulence conditions
     - Coupling methods can produce artifacts that, when present, can be the dominant features
     - There are no set of guidelines on how mesoscale coupling should be performed in the offshore environment
 
 .. admonition:: MMC Techniques Demonstrated
+
     - Application of profile assimilations technique for internally coupled cases
     - Application of boundary-coupled cases on different codes, namely SOWFA and WRF-LES
+
 
 Model Setups
 ============
 
-
 Mesoscale: WRF
--------------
+--------------
 
 Initial setup based on the SWiFT case. It consists of 88 vertical levels and uses ERA5 reanalysis data, and MYJ 
 PBL scheme. Details of the mesoscale setup and how to obtain ERA5 driving data is detailed in the notebook listed 
 below.
 
 .. admonition::  WRF Setup Available
-       The WRF setup (including namelists and auxiliary input data) is available on the `WRF-setups repository of 
-       the A2e-MMC GitHub <https://github.com/a2e-mmc/WRF-setups/tree/master/FINO_20100513to26>`_.
+
+    The WRF setup (including namelists and auxiliary input data) is available on the `WRF-setups
+    repository of the A2e-MMC GitHub
+    <https://github.com/a2e-mmc/WRF-setups/tree/master/FINO/20100513-26_mesoscale>`_.
 
 
 Internal-Coupled Mesoscale to Microscale: WRF-Mesoscale to SOWFA-LES
@@ -64,8 +68,10 @@ when the horizontal gradients in the mesoscale flow are small.  The resolved tur
 with the mesocale forcing term, but it does react to the mean conditions the forcing imposes.
 
 .. admonition::  SOWFA Setup Available
-       The internal-coupled SOWFA setup is available on the `SOWFA-setups repository of 
-       the A2e-MMC GitHub <https://github.com/a2e-mmc/SOWFA-setups/tree/master/offshore_FINO1_intCoupled>`_.
+
+    The internal-coupled SOWFA setup is available on the `SOWFA-setups repository of 
+    the A2e-MMC GitHub
+    <https://github.com/a2e-mmc/SOWFA-setups/tree/master/FINO/FINO1_internalCoupled>`_.
 
 
 Boundary-Coupled Mesoscale to Microscale: WRF-Mesoscale to SOWFA-LES
@@ -83,12 +89,14 @@ inhomogeneity is possible.  However, a disadvantage is that there is a significa
 properly formed state.
 
 .. admonition::  SOWFA Setup Available
-       The boundary-coupled SOWFA setup is available on the `SOWFA-setups repository of 
-       the A2e-MMC GitHub <https://github.com/a2e-mmc/SOWFA-setups/tree/master/offshore_FINO1_bdCoupled>`_.
+
+    The boundary-coupled SOWFA setup is available on the `SOWFA-setups repository of 
+    the A2e-MMC GitHub
+    <https://github.com/a2e-mmc/SOWFA-setups/tree/master/FINO/FINO1_boundaryCoupled>`_.
 
 
 Boundary-Coupled Mesoscale to Microscale: WRF-Mesoscale to WRF-LES, Mann Synthetic Turbulence
--------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------
 
 This last case couples a mesoscale model with a microscale model all within one code, WRF.  The finest simulaton nests
 are treated with LES, whereas the coarser nests use typical mesoscale turbulence modeling.  Coupling of information is through
@@ -101,21 +109,18 @@ perturbation field was prepared using Mann's synthetic turbulence method. The tu
 boundary-layer height on the lateral side of the domain in 10 seconds interval. 
 
 
-
 Boundary-Coupled Mesoscale to Microscale: WRF-Mesoscale to WRF-LES, Cell Perturbation Method
 --------------------------------------------------------------------------------------------
 
-
+.. attention::
+  This work is still in progress.
 
 
 Boundary-Coupled Mesoscale to Microscale: WRF-Mesoscale to WRF-LES, Control
 ---------------------------------------------------------------------------
 
-
-
-
-
-
+.. attention::
+  This work is still in progress.
 
 
 Data Sources
@@ -186,7 +191,9 @@ A time-height plot of the mesoscale driving conditions for the MMC techniques ex
 
 .. admonition:: View/Download the Assessment Notebooks
 
-    The assessment performed in this study is catalogued via Jupyter Notebooks on the A2e-MMC GitHub here: https://github.com/a2e-mmc/assessment/tree/master/studies/fino_offshore_microscale
+    The assessment performed in this study is catalogued via Jupyter Notebooks on the `A2e-MMC
+    GitHub
+    <https://github.com/a2e-mmc/assessment/tree/master/studies/FINO/fino_offshore_microscale>`_
 
 
 The period of interest for this case is 4-hour interval between 01Z and 04Z on May 16th, 2010, as indicated in :numref:`fig-fino_meso_z0to2000_tLES`. Shown next are some vertical profiles at every 30 minutes during the period of interest-- :numref:`fig-fino_all_verticalprofiles`. For each MMC technique investigated, observation data is plotted alongside observation data. Note that in the earlier part of the period of interest, the observation data show some waked effects between 80 and 100 m.
@@ -228,7 +235,8 @@ Even thought average quantities and instantaneous flowfield appears similar (wit
 Resulting Publications
 ======================
 
-* Thedin R, Quon E, Churchfield M. “Investigations of correlation and coherence in turbulence from a Large-Eddy Simulation”. Submitted to TORQUE 2022.
+.. rubric:: Resulting Publications
 
-
+.. bibliography:: ../all_project_pubs.bib
+    :filter: mmc_rtd_section % "FINO"
 

@@ -16,6 +16,10 @@ import os
 import sys
 sys.path.insert(0, os.path.abspath('/Users/hawbecke/Code/Python/mmctools/'))
 
+import pybtex.plugin
+from pybtex.style.formatting.alpha import Style as AlphaStyle
+from pybtex.style.labels.alpha import LabelStyle as AlphaLabels
+
 
 # -- Project information -----------------------------------------------------
 
@@ -40,11 +44,12 @@ release = u'0.0.1'
 # ones.
 extensions = [
     'sphinx.ext.mathjax',
+    'sphinx.ext.todo',
     'sphinxcontrib.bibtex',
+    # for mmctools documentation:
     'sphinx.ext.autodoc', 
     'sphinx.ext.coverage', 
     'sphinx.ext.napoleon',
-    'sphinx_rtd_theme',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -77,8 +82,28 @@ pygments_style = None
 numfig = True
 
 #bibtex_bibfiles = ['cases/aardvark.bib']
-bibtex_bibfiles = ['01_references.bib','wfip2_bib.bib']
-#bibtex_bibfiles = ['zreferences.bib','cases/aardvark.bib']
+bibtex_bibfiles = [
+    'all_project_pubs.bib',
+    'cases/nyserda_refs.bib',
+    'cases/swift_refs.bib',
+    'cases/wfip2_refs.bib'
+]
+bibtex_reference_style = 'author_year'
+#bibtex_reference_style = 'super'
+#bibtex_reference_style = 'label'
+#bibtex_default_style = 'plain' # duplicate numeric labels everywhere
+#bibtex_default_style = 'unsrt'
+
+class KeyLabels(AlphaLabels):
+    def format_label(self, entry):
+        return entry.key
+
+class MMCStyle(AlphaStyle):
+    default_label_style = 'keys'
+
+pybtex.plugin.register_plugin('pybtex.style.labels', 'keys', KeyLabels)
+pybtex.plugin.register_plugin('pybtex.style.formatting', 'mmcstyle', MMCStyle)
+bibtex_default_style = 'mmcstyle'
 
 # -- Options for HTML output -------------------------------------------------
 

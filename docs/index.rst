@@ -21,6 +21,7 @@ have been developed within this project.
    utilities
    cases
    code_contributions	
+   project_pubs
 
 .. Indices and tables
 .. ==================

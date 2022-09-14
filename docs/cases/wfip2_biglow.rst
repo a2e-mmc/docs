@@ -22,10 +22,12 @@ Here, the microscale is driven by mesoscale data from WRF fed as boundary condit
 
 
 .. admonition:: Relevance to wind energy
+
     - Complex terrain case including turbines
     - Gravity waves are excited due to the terrain and conditions during the period of interest
 
 .. admonition:: MMC Techniques Demonstrated
+
     - Application of boundary-coupled cases using different codes (WRF for mesoscale; SOWFA for microscale) on a complex terrain scenario
     - Terrain-conforming boundary coupling with WRF requires careful alignment of data
 
@@ -36,8 +38,9 @@ Model Setups
 The setup of this case involves a few different aspects we will go over in this section. More details of the case can be seen in the setup scripts of the microscale execution in SOWFA, linked below.
 
 .. admonition::  SOWFA Setup Available
-       The SOWFA setup is available on the `SOWFA-setups repository of 
-       the A2e-MMC GitHub <https://github.com/a2e-mmc/SOWFA-setups/tree/master/wfip2_biglow_bdCoupled>`_.
+
+    The SOWFA setup is available on the `SOWFA-setups repository of the A2e-MMC GitHub
+    <https://github.com/a2e-mmc/SOWFA-setups/tree/master/WFIP2/Biglow_boundaryCoupled>`_.
 
 
 The domain extents are shown in :numref:`fig-wfip2_biglow_domain`. We model a 30 x 30 km region. In order to map terrain-conforming mesoscale data to a terrain-conforming microscale domain, we create the grid in steps, illustrated in :numref:`fig-wfip2_biglow_mesh`. First, we create a coarse LES grid that conforms to a geometry STL file, thus having the bottom boundary points matching the locations of the bottom boundary points from the mesoscale domain. After that step, the quantities are mapped from the mesoscale domain onto the microscale. Next, the grid is refined to an appropriate level for turbulence-resolving large-eddy simulation. Additional local refinement regions around turbines can be added to the domain if desired. Finally, the higher resolution grid is conformed to the high-resolution STL geometry once again. The last step conforms the grid to the topographic details that were missing from the first step. This approach is needed to ensure WRF data exist at all point at the bottom boundary for proper mapping.

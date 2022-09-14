@@ -21,7 +21,7 @@ This is done by performing an ensemble of mesoscale-to-microscale simulations, c
 
     Locations of the NYSERDA floating lidar buoys and wind energy leased areas. (Image courtesy of Mike Optis.)
 
-.. admonition:: Relevance for Wind Energy
+.. admonition:: Relevance to Wind Energy
 
    - Informs forecasting/operational modeling of wind farm conditions as to what surface forcings are important and at which scale they need to be modeled
    - Informs resource assessment strategies in the offshore environment
@@ -51,7 +51,8 @@ Above this point, ∆z stretches to around 420 m at model top.
 .. admonition::
    WRF Setup Available
 
-   The WRF setup (including namelists and auxiliary input data) is available on the `WRF-setups repository of the A2e-MMC GitHub <https://github.com/a2e-mmc/WRF-setups/tree/master/NYSERDA>`_.
+   The WRF setup (including namelists and auxiliary input data) is available on the `WRF-setups
+   repository of the A2e-MMC GitHub <https://github.com/a2e-mmc/WRF-setups/tree/master/NYSERDA>`_.
 
 Additionally, a setup script is available in which the case will be setup automatically on a user's local environment.
 This allows for easy recreation of the model simulations from this study.
@@ -98,7 +99,9 @@ Assessment
 
 .. admonition:: View/Download the Assessment Notebooks
 
-   The assessment performed in this study is catalogued via Jupyter Notebooks on the `Assessment repository of the A2e-MMC GitHub <https://github.com/a2e-mmc/assessment/tree/master/studies/NYSERDA>`_.
+   The assessment performed in this study is catalogued via Jupyter Notebooks on the `Assessment
+   repository of the A2e-MMC GitHub
+   <https://github.com/a2e-mmc/assessment/tree/master/studies/NYSERDA>`_.
 
 This study utilizes several auxiliary SST datasets (:numref:`fig-NYSERDA-SST`) and surface parameterizations to determine model sensitivity of the low-level jet (LLJ) to surface temperature and surface characteristics such as roughness.
 The SST datasets vary in resolution and fidelity which can be easily seen by examining the gradients of SST.
@@ -140,18 +143,16 @@ The same can be said for the auxiliary suface feature tests (:numref:`fig-NYSERD
 
 .. _pubs:
 
-Resulting Publications
-----------------------
-
-* Hawbecker, Patrick, William Lassman, Jeff Mirocha, Raj K. Rai, Regis Thedin, Matthew Churchfield, Sue Ellen Haupt, and Colleen Kaul. "Offshore Sensitivities across Scales: A NYSERDA Case Study." In *102nd American Meteorological Society Annual Meeting*. AMS, 2022.
-
-
-
-
 
 References
 ----------
 
-.. bibliography:: ../01_references.bib
-   :all:
+.. rubric:: Resulting Publications
+
+.. bibliography:: ../all_project_pubs.bib
+    :filter: mmc_rtd_section % "NYSERDA"
+
+.. rubric:: Other
+
+.. bibliography:: nyserda_refs.bib
 

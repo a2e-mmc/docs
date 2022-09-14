@@ -5,8 +5,8 @@ Numerical Models
 
 Weather Research and Forecasting (WRF) Model
 ============================================
-WRF is a tool for numerical weather prediction developed at the National Center
-for Atmospheric Research (NCAR), the National Oceanic and Atmospheric
+WRF is a tool for numerical weather prediction (NWP) developed at the National
+Center for Atmospheric Research (NCAR), the National Oceanic and Atmospheric
 Administration (NOAA), the former Air Force Weather Agency (AFWA), the Naval
 Research Laboratory, the University of Oklahoma, and the Federal Aviation
 Administration (FAA).
