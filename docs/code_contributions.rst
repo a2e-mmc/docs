@@ -274,7 +274,9 @@ the Eckert number formulation shown in :numref:`fig-cpm_6` - :numref:`fig-cpm_8`
   Same as :numref:`fig-cpm_11`, but using slabs with a depth of two grid points. 
 
 
-Discussion ^^^^^^^^^^ The implementation of the CPM described herein contains multiple options for
+Discussion
+^^^^^^^^^^
+The implementation of the CPM described herein contains multiple options for
 idealized and real conditions, much of which has been tested and published. However, significant
 additional flexibility has been included, most of which remains untested. For example, the
 recommended cell sizes and number of rows were established using the Eckert number formulation of
