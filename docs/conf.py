@@ -84,6 +84,8 @@ numfig = True
 #bibtex_bibfiles = ['cases/aardvark.bib']
 bibtex_bibfiles = [
     'all_project_pubs.bib',
+    'code_refs.bib',
+    #'modeling_refs.bib',
     'cases/nyserda_refs.bib',
     'cases/swift_refs.bib',
     'cases/wfip2_refs.bib'
