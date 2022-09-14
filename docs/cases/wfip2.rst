@@ -40,8 +40,11 @@ The vertical grid is consistent across both domains with 50 levels and ∆z ≈ 
 
     WRF domain setup for the 10-day CAP event: HRRR (d01) and HRRRNEST (d02) are shown in the left and right panels. In d02, the locations of various WFIP2 measurement sites are shown by the red markers. This image is reproduced from :cite:t:`Arthur2022` (their Fig. 1).
 
-.. attention::
-  **The WRF setup has not been uploaded to GitHub yet. This is expected soon...**
+.. admonition::
+   WRF Setup Available
+
+   The WRF setup (including namelists and auxiliary input data) is available on the `WRF-setups
+   repository of the A2e-MMC GitHub <https://github.com/a2e-mmc/WRF-setups/tree/master/WFIP2/3DPBL_Cold_Pool>`_.
 
 The outer domain is initialized using the operational Rapid Refresh (RAP) model.
 Reforecast simulations using the HRRR and HRRRNEST setup are conducted every 12 hours from 00 UTC 10 January 2017 through 12 UTC 19 January 2017 and integrated for 24 hours each.
