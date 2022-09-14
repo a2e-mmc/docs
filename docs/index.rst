@@ -1,9 +1,6 @@
 Mesoscale-Microscale Coupling Manual
 ====================================
 
-.. note:: 
-  **This site is currently under construction.**
-
 This documentation describes ongoing work on the Atmosphere to 
 Electrons (A2e) mesoscale-microscale coupling (MMC) project. These 
 docs will provide overviews of the numerical models utilized within 
@@ -17,9 +14,9 @@ have been developed within this project.
    :caption: Contents:
 
    overview
-   codes 
-   utilities
+   methodology
    cases
+   numerical_models
    code_contributions	
    project_pubs
 
