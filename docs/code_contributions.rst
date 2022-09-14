@@ -202,5 +202,5 @@ References
 
 .. rubric:: Other
 
-.. bibliography:: inflowpert_refs.bib
+.. bibliography:: code_refs.bib
 

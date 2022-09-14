@@ -37,9 +37,7 @@ further investigation, and gain insight into barriers experienced by
 wind-energy modeling teams in the use of WRF for their research.
 
 For survey questions, results, and discussion including research opportunities,
-see:
-
-Colleen Kaul et al. WRF Modeling Practices for Wind Energy: Current Status and Future Needs. Technical Report PNNL-xxxxx, Pacific Northwest National Laboratory, 2022.
+see :cite:t:`Kaul2022`.
 
 
 Simulator fOr Wind Farm Applications (SOWFA)
@@ -75,4 +73,17 @@ More information: https://exawind.github.io/amr-wind/
 .. admonition:: Download AMR-Wind
 
    AMR-Wind is freely available on GitHub: `amr-wind <https://github.com/exawind/amr-wind>`_.
+
+
+References
+==========
+
+.. rubric:: Resulting Publications
+
+.. bibliography:: all_project_pubs.bib
+   :filter: mmc_rtd_section % "modeling"
+
+.. rubric:: Other
+
+.. bibliography:: modeling_refs.bib
 
