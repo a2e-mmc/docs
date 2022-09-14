@@ -89,10 +89,10 @@ Archive and Portal (DAP) <https://a2e.energy.gov/data#ProjectFilter=%5B%22mmc%22
   <https://github.com/a2e-mmc/assessment/blob/master/datasets/SWiFT/process_TTU_tower.ipynb>`_
   includes data standardization and sonic tilt correction, and calculates turbulence quantities of
   interest. `Additional calculations
-  <https://github.com/a2e-mmc/assessment/blob/master/datasets/SWiFT/process_TTU_tower_heatflux_stability.ipynb>`_
+  <https://github.com/a2e-mmc/assessment/blob/master/datasets/SWiFT/TTU_tower_heatflux_stability.ipynb>`_
   include virtual potential temperature, stability (bulk Richardson number and Obukhov stability
   parameter), and the surface heat flux. A more `indepth analysis of the TKE
-  <https://github.com/a2e-mmc/assessment/blob/master/datasets/SWiFT/process_TTU_tower_TKE.ipynb>`_
+  <https://github.com/a2e-mmc/assessment/blob/master/datasets/SWiFT/TTU_tower_TKE.ipynb>`_
   shows anomalous observations around 10:00 UTC on 9 November 2013.
 
   The mean quantities are combined with the radar dataset (described next) to form the input data
@@ -107,7 +107,8 @@ Archive and Portal (DAP) <https://a2e.energy.gov/data#ProjectFilter=%5B%22mmc%22
   study.
 
 The SOWFA inputs were generated with the notebooks in the assessment repository:
-`studies/SWiFT/coupling_comparison/preprocessing <https://github.com/ewquon/assessment/tree/master/studies/SWiFT/coupling_comparison/preprocessing/internal>`_.
+`studies/SWiFT/coupling_comparison/preprocessing
+<https://github.com/ewquon/assessment/tree/master/studies/SWiFT/coupling_comparison/preprocessing/internal>`_.
 
 Assessment
 ----------
@@ -115,7 +116,8 @@ Assessment
 * Results from the development and validation of the profile assimilation technique
   :cite:p:`Allaerts2020`, which couples the WRF mesoscale NWP model to SOWFA LES, are postprocessed
   in the
-  `studies/SWiFT/profile_assimilation_wrf/produce_figures.ipynb <https://github.com/ewquon/assessment/blob/master/studies/SWiFT/profile_assimilation_wrf/produce_figures.ipynb>`_
+  `studies/SWiFT/profile_assimilation_wrf/produce_figures.ipynb
+  <https://github.com/ewquon/assessment/blob/master/studies/SWiFT/profile_assimilation_wrf/produce_figures.ipynb>`_
   notebook. This study demonstrated that simple data assimilation techniques (i.e., direct profile
   assimilation) can lead to unphysical shear and turbulence production, due to the algorithm's
   inability to cope with inaccuracies in the mesoscale data. Applying mesoscale forcing with

@@ -99,7 +99,9 @@ Assessment
 
 .. admonition:: View/Download the Assessment Notebooks
 
-   The assessment performed in this study is catalogued via Jupyter Notebooks on the `Assessment repository of the A2e-MMC GitHub <https://github.com/a2e-mmc/assessment/tree/master/studies/NYSERDA>`_.
+   The assessment performed in this study is catalogued via Jupyter Notebooks on the `Assessment
+   repository of the A2e-MMC GitHub
+   <https://github.com/a2e-mmc/assessment/tree/master/studies/NYSERDA>`_.
 
 This study utilizes several auxiliary SST datasets (:numref:`fig-NYSERDA-SST`) and surface parameterizations to determine model sensitivity of the low-level jet (LLJ) to surface temperature and surface characteristics such as roughness.
 The SST datasets vary in resolution and fidelity which can be easily seen by examining the gradients of SST.

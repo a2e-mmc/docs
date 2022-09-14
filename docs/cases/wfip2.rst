@@ -119,7 +119,8 @@ Assessment
 
 .. admonition:: View/Download the Assessment Notebooks
 
-   The assessment performed in this study is catalogued on the A2e-MMC GitHub here: https://github.com/a2e-mmc/assessment/tree/master/studies/WFIP2-CAP
+   The assessment performed in this study is catalogued on the `A2e-MMC GitHub 
+   <https://github.com/a2e-mmc/assessment/tree/master/studies/WFIP2-CAP>`_
 
 An overview of the vertical structure of the cold pool event during the 10-day period as observed at the Wasco site is shown in :numref:`fig-wasco-10day`.
 Specifically, we show the evolution of the measured potential temperature and wind speed profiles, as well the model bias from Case #3, which generally performs better than Case #2 on the whole, as will be shown below.

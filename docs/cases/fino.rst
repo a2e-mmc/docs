@@ -70,7 +70,8 @@ with the mesocale forcing term, but it does react to the mean conditions the for
 .. admonition::  SOWFA Setup Available
 
     The internal-coupled SOWFA setup is available on the `SOWFA-setups repository of 
-    the A2e-MMC GitHub <https://github.com/a2e-mmc/SOWFA-setups/tree/master/offshore_FINO1_intCoupled>`_.
+    the A2e-MMC GitHub
+    <https://github.com/a2e-mmc/SOWFA-setups/tree/master/FINO/FINO1_internalCoupled>`_.
 
 
 Boundary-Coupled Mesoscale to Microscale: WRF-Mesoscale to SOWFA-LES
@@ -90,7 +91,8 @@ properly formed state.
 .. admonition::  SOWFA Setup Available
 
     The boundary-coupled SOWFA setup is available on the `SOWFA-setups repository of 
-    the A2e-MMC GitHub <https://github.com/a2e-mmc/SOWFA-setups/tree/master/offshore_FINO1_bdCoupled>`_.
+    the A2e-MMC GitHub
+    <https://github.com/a2e-mmc/SOWFA-setups/tree/master/FINO/FINO1_boundaryCoupled>`_.
 
 
 Boundary-Coupled Mesoscale to Microscale: WRF-Mesoscale to WRF-LES, Mann Synthetic Turbulence
@@ -189,7 +191,9 @@ A time-height plot of the mesoscale driving conditions for the MMC techniques ex
 
 .. admonition:: View/Download the Assessment Notebooks
 
-    The assessment performed in this study is catalogued via Jupyter Notebooks on the A2e-MMC GitHub here: https://github.com/a2e-mmc/assessment/tree/master/studies/fino_offshore_microscale
+    The assessment performed in this study is catalogued via Jupyter Notebooks on the `A2e-MMC
+    GitHub
+    <https://github.com/a2e-mmc/assessment/tree/master/studies/FINO/fino_offshore_microscale>`_
 
 
 The period of interest for this case is 4-hour interval between 01Z and 04Z on May 16th, 2010, as indicated in :numref:`fig-fino_meso_z0to2000_tLES`. Shown next are some vertical profiles at every 30 minutes during the period of interest-- :numref:`fig-fino_all_verticalprofiles`. For each MMC technique investigated, observation data is plotted alongside observation data. Note that in the earlier part of the period of interest, the observation data show some waked effects between 80 and 100 m.
