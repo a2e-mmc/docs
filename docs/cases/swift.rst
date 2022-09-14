@@ -85,7 +85,7 @@ Data Sources
 Two SWiFT datasets were used in the following MMC studies and are freely available on the `A2e Data 
 Archive and Portal (DAP) <https://a2e.energy.gov/data#ProjectFilter=%5B%22mmc%22%5D>`_.
 
-* 200-m tower :cite:p:`DAP_TTUtower`: The `analysis of this dataset 
+* 200-m tower :cite:p:`DAP_TTUtower`: The `tower data analysis 
   <https://github.com/a2e-mmc/assessment/blob/master/datasets/SWiFT/process_TTU_tower.ipynb>`_
   includes data standardization and sonic tilt correction, and calculates turbulence quantities of
   interest. `Additional calculations
@@ -99,7 +99,7 @@ Archive and Portal (DAP) <https://a2e.energy.gov/data#ProjectFilter=%5B%22mmc%22
   for the :cite:t:`Allaerts2022` study. The turbulence quantities are used to validate the LES
   predicted turbulence in :cite:t:`Allaerts2020,Draxl2021,Allaerts2022`. 
 
-* Radar wind profiler with RASS :cite:p:`DAP_TTUradar`: The `analysis of this dataset 
+* Radar wind profiler with RASS :cite:p:`DAP_TTUradar`: The `radar data analysis
   <https://github.com/a2e-mmc/assessment/blob/master/datasets/SWiFT/process_TTU_radar.ipynb>`_ shows
   two wind scanning modes, short range (up to 2 km AGL) and long range (up to 6 km) and
   corresponding temperature profiles up to a maximum of 800 m AGL. The same notebook also performs

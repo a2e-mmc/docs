@@ -22,10 +22,12 @@ Here, the microscale is driven by mesoscale data from WRF fed as boundary condit
 
 
 .. admonition:: Relevance to wind energy
+
     - Complex terrain case including turbines
     - Gravity waves are excited due to the terrain and conditions during the period of interest
 
 .. admonition:: MMC Techniques Demonstrated
+
     - Application of boundary-coupled cases using different codes (WRF for mesoscale; SOWFA for microscale) on a complex terrain scenario
     - Terrain-conforming boundary coupling with WRF requires careful alignment of data
 
@@ -36,6 +38,7 @@ Model Setups
 The setup of this case involves a few different aspects we will go over in this section. More details of the case can be seen in the setup scripts of the microscale execution in SOWFA, linked below.
 
 .. admonition::  SOWFA Setup Available
+
     The SOWFA setup is available on the `SOWFA-setups repository of the A2e-MMC GitHub
     <https://github.com/a2e-mmc/SOWFA-setups/tree/master/WFIP2/Biglow_boundaryCoupled>`_.
 
