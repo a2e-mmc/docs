@@ -51,7 +51,8 @@ Above this point, ∆z stretches to around 420 m at model top.
 .. admonition::
    WRF Setup Available
 
-   The WRF setup (including namelists and auxiliary input data) is available on the `WRF-setups repository of the A2e-MMC GitHub <https://github.com/a2e-mmc/WRF-setups/tree/master/NYSERDA>`_.
+   The WRF setup (including namelists and auxiliary input data) is available on the `WRF-setups
+   repository of the A2e-MMC GitHub <https://github.com/a2e-mmc/WRF-setups/tree/master/NYSERDA>`_.
 
 Additionally, a setup script is available in which the case will be setup automatically on a user's local environment.
 This allows for easy recreation of the model simulations from this study.

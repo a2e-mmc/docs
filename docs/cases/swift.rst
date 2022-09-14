@@ -75,7 +75,8 @@ parameterization are detailed in the WRF namelist.
 .. admonition::
    WRF Setup Available
 
-   The WRF setup is available on the `WRF-setups repository of the A2e-MMC GitHub <https://github.com/a2e-mmc/WRF-setups/tree/master/SWiFT/20131108_GFS>`_.
+   The WRF setup is available on the `WRF-setups repository of the A2e-MMC GitHub
+   <https://github.com/a2e-mmc/WRF-setups/tree/master/SWiFT/20131108_GFS>`_.
 
 
 Data Sources

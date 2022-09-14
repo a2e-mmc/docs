@@ -46,8 +46,9 @@ below.
 
 .. admonition::  WRF Setup Available
 
-    The WRF setup (including namelists and auxiliary input data) is available on the `WRF-setups repository of 
-    the A2e-MMC GitHub <https://github.com/a2e-mmc/WRF-setups/tree/master/FINO_20100513to26>`_.
+    The WRF setup (including namelists and auxiliary input data) is available on the `WRF-setups
+    repository of the A2e-MMC GitHub
+    <https://github.com/a2e-mmc/WRF-setups/tree/master/FINO/20100513-26_mesoscale>`_.
 
 
 Internal-Coupled Mesoscale to Microscale: WRF-Mesoscale to SOWFA-LES
