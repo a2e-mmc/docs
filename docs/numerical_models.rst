@@ -39,7 +39,8 @@ wind-energy modeling teams in the use of WRF for their research.
 For survey questions, results, and discussion including research opportunities,
 see:
 
-Colleen Kaul. WRF Modeling Practices for Wind Energy: Current Status and Future Needs. Technical Report PNNL-xxxxx, Pacific Northwest National Laboratory, 2022.
+Colleen Kaul et al. WRF Modeling Practices for Wind Energy: Current Status and Future Needs. Technical Report PNNL-xxxxx, Pacific Northwest National Laboratory, 2022.
+
 
 Simulator fOr Wind Farm Applications (SOWFA)
 ============================================
@@ -48,7 +49,7 @@ the open-source OpenFOAM (Field Operation And Manipulation) platform for
 simulating the microscale atmospheric boundary layer environment. Wind turbines
 are modeled as actuator lines (or actuator disks) with the option to include
 momentum sources to represent the wind turbine tower and nacelle. Coupling to
-the NREL FAST (Fatigue, Aerodynamics, Structures, Turbulence) model provides
+the NREL OpenFAST (Fatigue, Aerodynamics, Structures, Turbulence) model provides
 comprehensive aeroservoelastic capabilities.  
 
 More information: https://nwtc.nrel.gov/SOWFA
@@ -58,14 +59,20 @@ More information: https://nwtc.nrel.gov/SOWFA
    SOWFA is freely available on GitHub: `SOWFA-6 <https://github.com/NREL/SOWFA-6/tree/dev>`_. SOWFA-6 depends on `OpenFOAM-6 <https://github.com/OpenFOAM/OpenFOAM-6>`_. To use wind turbine aeroelastic coupling, `OpenFAST <https://github.com/OpenFAST/openfast>`_ is required.  
 
 
-
-Exawind
-===========
-
 AMR-Wind
---------
-.. todo::
-  **Fill in this section.**
+========
+AMR-Wind is a massively parallel, block-structured incompressible LES for wind energy applications.
+Based on the AMReX framework, it is well equipped to run on next-generation, leadership-class
+supercomputers with CPU and/or GPU architectures. The software is under active development by
+researchers at NREL, Sandia National Laboratories, and Lawrence Berkley National Laboratory. Like
+SOWFA, AMR-Wind has the ability to perform profile assimilation and interface with `OpenFAST
+<https://github.com/OpenFAST/openfast>`_ for aeroelastic modeling. It can also be coupled with
+`Nalu-Wind <https://github.com/exawind/nalu-wind>`_, an overset near-body flow solver, amd behave as
+a background solver.
 
-More information: https://amr-wind.readthedocs.io
+More information: https://exawind.github.io/amr-wind/
+
+.. admonition:: Download AMR-Wind
+
+   AMR-Wind is freely available on GitHub: `amr-wind <https://github.com/exawind/amr-wind>`_.
 
