@@ -33,7 +33,7 @@ The next four parameters ``cpm_nb``, ``cpm_sb``, ``cpm_wb`` and ``cpm_eb`` speci
 The next parameter ``cpm_amp`` specifies the target perturbation amplitude window. This value can be determined from among four options. Setting ``cpm_amp`` > 0.0 uses that value as the target, with each cell's value drawn from a uniform random number distribution, shifted to a zero mean, and scaled such that the range of values spans [-``cpm_amp``, ``cpm_amp``]. If ``cpm_amp`` = 0.0 (the default value), the amplitude is instead determined automatically using one of the formulations specified by ``cpm_opt`` = 2-4, as described below.
 
 
-:numref:`fig-cpm_2`, :numref:`fig-cpm_3`, and :numref:`fig-cpm_4` demonstrate some of the above-discussed configurability. For example, in :numref:`fig-cpm_2` the perturbation zone contains smaller cells and more rows, while in :numref:`fig-cpm3` and :numref:`fig-cpm4` a smaller number of larger cells is specified, along with different boundaries and amplitudes. Note that in :numref:`fig-cpm_1` and :numref:`fig-cpm_2`, the total numbers of grid points defining the domain extent, here [nx,ny] = [288,144] in the x- and y-directions, respectively, are divisible by ``cpm_ngc_h``, with no remainder, resulting in cells of the same size along all boundaries. In contrast, :numref:`fig-cpm_3` and :numref:`fig-cpm_4` use values of ``cpm_ngc_h`` that do not divide evenly into ni or nj, leaving portions of cells equal to the remainder of ni or nj divided by ``cpm_ngc_h``. In this implementation, the smaller cells occur at the north and east edges of the domains, since the tilings of the north and south boundaries begin at the west boundary, while those of the west and east boundaries begin at the south boundary. The order of the boundary tiling is west, east, south, then north, which results in the fractional cells appearing along different tilings at the east boundary edges in :numref:`fig-cpm_3` and :numref:`fig-cpm_4`. One way to eliminate fractional cells is to ensure that ``cpm_ngc_h`` divides into ni and nj with no remainder.
+:numref:`fig-cpm_2`, :numref:`fig-cpm_3`, and :numref:`fig-cpm_4` demonstrate some of the above-discussed configurability. For example, in :numref:`fig-cpm_2` the perturbation zone contains smaller cells and more rows, while in :numref:`fig-cpm_3` and :numref:`fig-cpm_4` a smaller number of larger cells is specified, along with different boundaries and amplitudes. Note that in :numref:`fig-cpm_1` and :numref:`fig-cpm_2`, the total numbers of grid points defining the domain extent, here [nx,ny] = [288,144] in the x- and y-directions, respectively, are divisible by ``cpm_ngc_h``, with no remainder, resulting in cells of the same size along all boundaries. In contrast, :numref:`fig-cpm_3` and :numref:`fig-cpm_4` use values of ``cpm_ngc_h`` that do not divide evenly into ni or nj, leaving portions of cells equal to the remainder of ni or nj divided by ``cpm_ngc_h``. In this implementation, the smaller cells occur at the north and east edges of the domains, since the tilings of the north and south boundaries begin at the west boundary, while those of the west and east boundaries begin at the south boundary. The order of the boundary tiling is west, east, south, then north, which results in the fractional cells appearing along different tilings at the east boundary edges in :numref:`fig-cpm_3` and :numref:`fig-cpm_4`. One way to eliminate fractional cells is to ensure that ``cpm_ngc_h`` divides into ni and nj with no remainder.
 
 .. _fig-cpm_2:
 .. figure:: img/CPM_OPT_1_N4_C8_V1_B_NW_AMP1.5_DT1_CPM_XY_namelist.png
@@ -58,7 +58,7 @@ The next parameter ``cpm_amp`` specifies the target perturbation amplitude windo
 
 :numref:`fig-cpm_5` demonstrates three additional run-time options. One option is the automatic selection of which boundaries to perturb, chosen by setting ``cpm_nb`` = ``cpm_sb`` = ``cpm_eb`` = ``cpm_wb`` = 0. In this example featuring southwesterly flow, the south and west boundaries are selected. Another option shown here is how to stop the perturbations at a specified a number of grid points adjacent to any outflow boundary using cpm_off_h. This offset will be applied at any boundary that does not have perturbations applied, that is adjacent to a boundary that does. For demonstration, in :numref:`fig-cpm_5`, ``cpm_noff_h`` = 5, which leaves cells of width 3 grid points remaining along the north and east boundaries, since ``cpm_noff_h`` does not divide evenly into ``cpm_ngc_h``. Such smaller cells can be eliminated by specifying compatible values of ``cpm_noff_h``, ``cpm_ngc_h``, ni and nj.
 
-:numref:`fig-cpm_5` also demonstrates one option for automatic determination of the perturbation amplitude, ``cpm_opt`` = 2. This option bases the amplitude on the turbulent Eckert number, following Munoz-Esparza et al, 2014 and Munoz-Esparza et al, 2015. This formulation requires the magnitude of the geostrophic wind, the value of which is determined using the lateral edge-averaged horizontal wind components at the vertical grid cell index just below the height of the geostrophic wind, as used for the automated boundary selection option. The case shown in :numref:`fig-cpm_5` used a geostrophic wind speed of 15 m/s, resulting in a target amplitude of approximately 1.1 K.
+:numref:`fig-cpm_5` also demonstrates one option for automatic determination of the perturbation amplitude, ``cpm_opt`` = 2. This option bases the amplitude on the turbulent Eckert number, following :cite:t:`Munoz-Esparza2014,Munoz-Esparza2015`. This formulation requires the magnitude of the geostrophic wind, the value of which is determined using the lateral edge-averaged horizontal wind components at the vertical grid cell index just below the height of the geostrophic wind, as used for the automated boundary selection option. The case shown in :numref:`fig-cpm_5` used a geostrophic wind speed of 15 m/s, resulting in a target amplitude of approximately 1.1 K.
 
 .. _fig-cpm_5:
 .. figure:: img/CPM_OPT_2_N8_C3_V1_B_AUTO_AMP_AUTO_DT_AUTO_CPM_XY_namelist.png
@@ -94,7 +94,7 @@ The overlapping within and gaps between the perturbations shown in :numref:`fig-
 
   As in :numref:`fig-cpm_7`, but using slabs with a depth of two grid points. 
 
-Two other scaling formulations for the perturbation amplitude have been developed, following Munoz-Esparza and Kosovic, 2018. :numref:`fig-cpm_9` demonstrates a method intended for stable conditions, ``cpm_opt`` = 3, showing instantaneous X-Z slices of perturbation amplitude (top) and vertical velocity (bottom). This method uses a modified Richardson number, here shown with the default value of ``cpm_rim`` = -1.0. 
+Two other scaling formulations for the perturbation amplitude have been developed, following :cite:t:`Munoz-Esparza2018`. :numref:`fig-cpm_9` demonstrates a method intended for stable conditions, ``cpm_opt`` = 3, showing instantaneous X-Z slices of perturbation amplitude (top) and vertical velocity (bottom). This method uses a modified Richardson number, here shown with the default value of ``cpm_rim`` = -1.0. 
 
 While difficult to discern, :numref:`fig-cpm_9` shows a slight increase in the magnitude of the perturbations with height, above the decrease occurring over the lowest ten or so grid points. The vertical velocity shows a corresponding local maximum of variability near the height of the top of the perturbation zone. These features are due to the use of a stretched vertical grid in this setup, which increases the vertical grid spacing with height, rather than using a constant vertical grid depth as in the reference. The bulk CPM amplitude formulation uses vertical differences of wind speed and potential temperature, rather than gradients. Therefore, all else being equal (e.g. for constant vertical gradients), the ``cpm_opt`` = 3 formulation will compute larger vertical differences, hence larger perturbation amplitudes, with height as the grid cell depth increases. Therefore it is recommended to use constant vertical grid spacing with this option. 
 
@@ -134,15 +134,73 @@ The rationale for perturbing the potential temperature is to generate buoyancy a
 
 Discussion
 ^^^^^^^^^^
-The implementation of the CPM described herein contains multiple options for idealized and real conditions, much of which has been tested and published. However, significant additional flexibility has been included, most of which remains untested. For example, the recommended cell sizes and number of rows were established using the Eckert number formulation of Munoz-Esparza et al 2014 and 2015, with a cell depth of one grid point. While the use of slabs of a depth of two grid points may yield slightly more rapid development of turbulence motions, the impact on the evolving turbulence field has not been established. The vertical velocity application implemented herein also differs from the approach of Mazzaro et al 2019, here applying the perturbations directly to the vertical velocity field, rather than through the forcing tendency as in the original formulation.
+The implementation of the CPM described herein contains multiple options for idealized and real conditions, much of which has been tested and published. However, significant additional flexibility has been included, most of which remains untested. For example, the recommended cell sizes and number of rows were established using the Eckert number formulation of :cite:t:`Munoz-Esparza2014,Munoz-Esparza2015`, with a cell depth of one grid point. While the use of slabs of a depth of two grid points may yield slightly more rapid development of turbulence motions, the impact on the evolving turbulence field has not been established. The vertical velocity application implemented herein also differs from the approach of :cite:t:`Mazzaro2019`, here applying the perturbations directly to the vertical velocity field, rather than through the forcing tendency as in the original formulation.
 
 The expanded functionality of the MMC implementation of the CPM is intended to support further optimization of the approaches, including further examination of the physical dimensions of the cells, number of cells, amplitudes and refresh timescales, modified Richardson number, and other parameters, for given sets of forcing and landscape conditions. However, until the performance of any alternate configurations is established, it is recommended to use the default configuration settings from the publications cited.
 
 
 Mann Method
 -----------
+The synthetic perturbation method applies the turbulence field along the inflow boundaries of the LES domain. The turbulence can be generated using any stochastic method, such as Mann :cite:p:`Mann1998`, TurbSim :cite:p:`turbsim`, etc. Herein, we describe the implementation of Mann synthetic turbulence in the WRF model to spin up the turbulence. The turbulence field is prepared separately from the WRF model using the empirical relation for the synthetic turbulence method. A homogeneous turbulent field (with a mean value of zero) is applied along the inflow boundary of the microscale domain at the prescribed frequency (e.g., 10 sec). This will instigate turbulence in the incoming wind as it progresses downstream from the boundaries.
+
+The amount of turbulence in the Mann method is controlled by the length scale and the spectral energy scaling intensity as the input parameters. If observational data are available, the intensity of the turbulence can be adjusted by scaling the square root of the variances calculated from the observations. The turbulence should not be added above the boundary-layer depth. The vertical inflow plane added to the wind field at the microscale boundary is shown in :numref:`fig-mann_turb` for two-length scales and turbulence scaling intensities. The first and second panels are the u-velocity field created with a length scale of 100 m and 200 m with the identical scaling intensity factor of 50%. The third panel shows the u-velocity same as the second, but the scaling intensity factor is reduced to 10%. The amount of turbulence in the simulated field in the microscale domain depends on these inputs.
+
+.. _fig-mann_turb:
+.. figure:: img/Mann_inflow.png
+  :width: 800
+  :align: center
+
+  Inflow plane generated by the Mann method using length scale and scaling intensity of 100 m and 50% (left), 200 m and 50% (middle), and 200 m and 10% (right) 
 
 
 TurbSim Method
 --------------
+TurbSim applies the Veers method :cite:p:`Veers1988` to generate time-varying homogeneous turbulent
+inflow planes that are periodic in time. Inputs include either a modeled turbulence spectrum (e.g.,
+the Kaimal model) or an input turbulent time history from which spectral amplitudes and phases can
+be calculated. A tunable coherence model correlates the fluctuations of a particular velocity
+component, between any two points on the inflow plane, as a function of their spatial separation.
+Other parameters describing the synthetic turbulence include turbulence, integral-length, and
+coherence scale parameters.
+
+To account for nonstationarity and vertical heterogeneity, the simulated velocity fluctuations can
+be scaled over time to match a known time history. Similarly, if information about the structure of
+the ABL is known, the simulated velocity fluctuations can be scaled over height such that they are 0
+in the free atmosphere. This information may be approximated by WRF PBL scheme outputs (``PBLH`` and
+``TKE_PBL``) if available to produce inflow planes such as those seen in :numref:`fig-turbsim_turb`.
+
+.. _fig-turbsim_turb:
+.. figure:: img/TurbSim_snapshots.png
+  :width: 800
+  :align: center
+
+  Inflow planes during a morning transition generated by TurbSim, using time-varying velocity
+  variance and ABL height scaling
+
+.. admonition:: Example code
+
+    Example code for extracting TurbSim fluctuations offline for use with SOWFA or WRF-LES can be
+    found in the `GitHub repo
+    <https://github.com/ewquon/assessment/blob/master/studies/SWiFT/coupling_comparison/preprocessing/boundary/turbsim_to_velocity_perturbations.ipynb>`_.
+
+An idealized verification study :cite:p:`Quon2018` showed that the addition of synthetic momentum
+perturbations can reduce the fetch--the region over which turbulence develops on a finite
+(aperiodic) domain--by a kilometer or more. The study used underresolved turbulence fields from a
+coarse LES mesh (with 40 m spacing) as initial conditions and then compared the evolution of one-
+and two-point statistics on a fine mesh (10 m), with and without perturbations. TurbSim and a
+turbulence enrichment methodology (Gabor Kinematic Simulation) were both found to be similarly
+effective in this study.
+
+
+References
+==========
+
+.. rubric:: Resulting Publications
+
+.. bibliography:: all_project_pubs.bib
+    :filter: mmc_rtd_section % "perts"
+
+.. rubric:: Other
+
+.. bibliography:: inflowpert_refs.bib
 
