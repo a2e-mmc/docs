@@ -123,7 +123,7 @@ Assessment
   `studies/SWiFT/profile_assimilation_wrf/produce_figures.ipynb
   <https://github.com/a2e-mmc/assessment/blob/master/studies/SWiFT/profile_assimilation_wrf/produce_figures.ipynb>`_
   notebook. This study demonstrated that simple data assimilation techniques (i.e., direct profile
-  assimilation) can lead to unphysical shear and turbulence production, due to the algorithm's
+  assimilation) can lead to nonphysical shear and turbulence production, due to the algorithm's
   inability to cope with inaccuracies in the mesoscale data. Applying mesoscale forcing with
   vertical smoothing (i.e., indirect profile assimilation) improves predictions of turbulence
   statistics (:numref:`fig-WRFPAT_TKE_comparison`). 

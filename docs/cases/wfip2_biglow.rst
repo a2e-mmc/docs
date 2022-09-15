@@ -7,7 +7,7 @@ Case Overview
 =============
 
 This study is focused on the complex terrain region around the Biglow Canyon wind farm. It is located in the region near the second Wind Forecast Improvement Project (WFIP2) site, characterized by pronounced topographic features.
-Nearby features, such as the Columbia River Gorge forms a gap in the mountian range and presents an environment that results in complex flow patterns. The region includes a few wind farms. In especial, in this case we model the turbines present in the Biglow Canyon wind farm. An overview of the region considered in shown in :numref:`fig-wfip2_biglow_domain`, as well as nearby turbines.
+Nearby features, such as the Columbia River Gorge forms a gap in the mountain range and presents an environment that results in complex flow patterns. The region includes a few wind farms. In especial, in this case we model the turbines present in the Biglow Canyon wind farm. An overview of the region considered in shown in :numref:`fig-wfip2_biglow_domain`, as well as nearby turbines.
 
   .. _fig-wfip2_biglow_domain:
   .. figure:: ../img/wfip2_biglow_domain.png
@@ -66,7 +66,7 @@ The goal is to include all 217 turbines from the Biglow Canyon wind farm on the 
      Close-up view of the turbines at the Biglow Canyon wind farm. The shaded area represents a grid refinement surrounding the turbine. The refinements are usually aligned with the wind direction to capture the turbine's wake.
 
 
-Gravity waves usually appear in the period of interest. The waves are organized perturbations in the vertical velocity component.  The perturbation can reflect at the top boudary and create spurious turbulence that leads to numerical instabilities and unphysical flowfield. To prevent that, we use Rayleigh damping zones near the top of the domain.
+Gravity waves usually appear in the period of interest. The waves are organized perturbations in the vertical velocity component.  The perturbation can reflect at the top boundary and create spurious turbulence that leads to numerical instabilities and unphysical flowfield. To prevent that, we use Rayleigh damping zones near the top of the domain.
 
 Cell perturbation methods are also used to trigger turbulence development and reduce fetch extents. In the preliminary results presented in this page, no perturbation methods are used, but the setup will be updated in the near future including them.
 

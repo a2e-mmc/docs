@@ -114,8 +114,8 @@ When on the LES domains, the overall differences are generally constrained to su
 
     Auxiliary SST datasets utilized within this study.
 
-The additional tests that are run include using WRF's sst_skin parameterization, a 1-D ocean mixed-layer model (OMLM), implementing a shallow water roughness parameterization, and changing the land use dataset.
-WRF's sst_skin parameterization :cite:`zeng2005prognostic` prognostically calculates diurnal fluctuations in SST.
+The additional tests that are run include using WRF's SST skin parameterization, a 1-D ocean mixed-layer model (OMLM), implementing a shallow water roughness parameterization, and changing the land use dataset.
+WRF's SST skin parameterization :cite:`zeng2005prognostic` prognostically calculates diurnal fluctuations in SST.
 The 1-D OMLM model :cite:`zi2012new` adjusts SST based on the gradients of SST and other variables such as wind speed.
 Lastly, the shallow water roughness scheme :cite:`jimenez2018need` calculates over-water roughness based on bathymetry (for depths between 10 and 100 m).
 
@@ -129,7 +129,7 @@ Ensemble mean error also shows a consistent pattern between the SST datasets and
 
     Vertical profiles of (a) mean wind speed and (b) ensemble mean error and spread for the mesoscale runs (d02) for the SST cases.
 
-The same can be said for the auxiliary suface feature tests (:numref:`fig-NYSERDA-aux_ens`) in which the vertical profiles of wind speed are very similar for each case resulting in low spread.
+The same can be said for the auxiliary surface feature tests (:numref:`fig-NYSERDA-aux_ens`) in which the vertical profiles of wind speed are very similar for each case resulting in low spread.
 
   .. _fig-NYSERDA-aux_ens:
   .. figure:: ../img/NYSERDA_AUX_sensitivity.png
