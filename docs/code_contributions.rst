@@ -337,7 +337,7 @@ in the free atmosphere. This information may be approximated by WRF PBL scheme o
 
     Example code for extracting TurbSim fluctuations offline for use with SOWFA or WRF-LES can be
     found in the `GitHub repo
-    <https://github.com/ewquon/assessment/blob/master/studies/SWiFT/coupling_comparison/preprocessing/boundary/turbsim_to_velocity_perturbations.ipynb>`_.
+    <https://github.com/a2e-mmc/assessment/blob/master/studies/SWiFT/coupling_comparison/preprocessing/boundary/turbsim_to_velocity_perturbations.ipynb>`_.
 
 An idealized verification study :cite:p:`Quon2018` showed that the addition of synthetic momentum
 perturbations can reduce the fetch--the region over which turbulence develops on a finite
