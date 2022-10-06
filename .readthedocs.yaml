@@ -25,8 +25,9 @@ sphinx:
 
 # Optionally declare the Python requirements required to build your docs
 # the pip way...
-#python:
-#    install:
-#    - requirements: docs/requirements.txt
-conda:
-    environment: environment.yaml
+python:
+    install:
+    - requirements: docs/requirements.txt
+
+#conda:
+#    environment: environment.yaml
