@@ -6,14 +6,14 @@ The `Scaled Wind Farm Technology (SWiFT)
 <https://energy.sandia.gov/programs/renewable-energy/wind-power/swift-facilities/>`_ facility in
 Lubbock, Texas, is hosted at the Texas Tech University (TTU) National Wind Institute
 :cite:p:`Hirth2014` and operated by Sandia National Laboratories. This site was previously chosen as
-an International Energy Agency Task 31 ("Wakebench") `benchmark for wind-turbine-wake evolution and
-dynamics <https://wakebench-swift.readthedocs.io/>`_. For MMC research, this site is an attractive
-validation dataset because it has flat terrain with uniform land cover. Essential validation data
-include a heavily instrumented 200-m meteorological mast with 10 measurements heights offering
-high-frequency wind measurements from 0.9 to 200 m above ground level (AGL). These are complemented
-by a radar wind profiler with radio acoustic sounding system (RASS) for measurements of wind and
-temperature profiles above 200 m, as well as data from the West Texas Mesonet. Details of the site
-characterization are provided in :cite:t:`Kelley2016`. 
+an `International Energy Agency Task 31 ("Wakebench") benchmark
+<https://wakebench-swift.readthedocs.io/>`_ for wind-turbine-wake evolution and dynamics. For MMC
+research, this site is an attractive validation dataset because it has flat terrain with uniform
+land cover. Essential validation data include a heavily instrumented 200-m meteorological mast with
+10 measurements heights offering high-frequency wind measurements from 0.9 to 200 m above ground
+level (AGL). These are complemented by a radar wind profiler with radio acoustic sounding system
+(RASS) for measurements of wind and temperature profiles above 200 m, as well as data from the West
+Texas Mesonet. Details of the site characterization are provided in :cite:t:`Kelley2016`. 
 
   .. _fig-SWIFT-site:
   .. figure:: ../img/SWiFT_site.png
@@ -45,8 +45,8 @@ unrealistic flow in the microscale.
 
    - Nonstationary conditions result in time-varying hub-height wind speed and direction, wind shear
      and veer, and turbulence intensity. 
-   - Accurately capturing the downscaling of energy from the microscale is important for predicting
-     realistic turbulent flow features in the wind-farm operating environment.
+   - Accurate downscaling of energy from the microscale is important for predicting realistic
+     turbulent flow features in the wind-farm operating environment.
 
 .. admonition:: MMC Techniques Demonstrated
 
@@ -106,9 +106,13 @@ Archive and Portal (DAP) <https://a2e.energy.gov/data#ProjectFilter=%5B%22mmc%22
   the data reconstruction to create the mesoscale forcing dataset for the :cite:t:`Allaerts2022`
   study.
 
-The SOWFA inputs were generated with the notebooks in the assessment repository:
-`studies/SWiFT/coupling_comparison/preprocessing
-<https://github.com/ewquon/assessment/tree/master/studies/SWiFT/coupling_comparison/preprocessing/internal>`_.
+.. admonition::
+   Preprocessing notebooks available
+
+   The SOWFA inputs were generated with the notebooks in the assessment repository:
+   `studies/SWiFT/coupling_comparison/preprocessing
+   <https://github.com/a2e-mmc/assessment/tree/master/studies/SWiFT/coupling_comparison/preprocessing/internal>`_.
+
 
 Assessment
 ----------
@@ -117,9 +121,9 @@ Assessment
   :cite:p:`Allaerts2020`, which couples the WRF mesoscale NWP model to SOWFA LES, are postprocessed
   in the
   `studies/SWiFT/profile_assimilation_wrf/produce_figures.ipynb
-  <https://github.com/ewquon/assessment/blob/master/studies/SWiFT/profile_assimilation_wrf/produce_figures.ipynb>`_
+  <https://github.com/a2e-mmc/assessment/blob/master/studies/SWiFT/profile_assimilation_wrf/produce_figures.ipynb>`_
   notebook. This study demonstrated that simple data assimilation techniques (i.e., direct profile
-  assimilation) can lead to unphysical shear and turbulence production, due to the algorithm's
+  assimilation) can lead to nonphysical shear and turbulence production, due to the algorithm's
   inability to cope with inaccuracies in the mesoscale data. Applying mesoscale forcing with
   vertical smoothing (i.e., indirect profile assimilation) improves predictions of turbulence
   statistics (:numref:`fig-WRFPAT_TKE_comparison`). 
@@ -136,7 +140,7 @@ Assessment
 * Results from the evaluation of coupling the WRF mesoscale NWP model to SOWFA through mesoscale
   budget components :cite:p:`Draxl2021` are postprocessed in the
   `studies/SWiFT/budget_components_coupling/plot_*
-  <https://github.com/ewquon/assessment/tree/master/studies/SWiFT/budget_components_coupling>`_
+  <https://github.com/a2e-mmc/assessment/tree/master/studies/SWiFT/budget_components_coupling>`_
   notebooks. This work shows that mesoscale models can have difficulties predicting profiles of
   shear and veer. While LES can improve shear and veer predictions, the wind speed and direction are
   not adjusted. When forcing the LES with the mesoscale budget, spatiotemporal averaging of the

@@ -28,7 +28,6 @@ Objectives
 * Verify and Validate results using formal and reproducible techniques
 * Quantify the uncertainty in the results
 
-
 Participating Laboratories
 ==========================
 
@@ -40,5 +39,17 @@ Participating Laboratories
 * National Renewable Energy Lab (NREL)
 * Sandia National Lab (SNL)
 
+
+Industry Symposium
+==================
+
+On September 14-15, 2022, the MMC team held an symposium, `MMC Methods to Meet the Wind Industry's
+Needs <https://ral.ucar.edu/events/2022/mmc-methods-meet-wind-industrys-needs>`_.
+Event recordings can be found on
+`YouTube <https://www.youtube.com/playlist?list=PLl6YBMxdrM8liIyK8P5YntA0pg7kAR6V4>`_.
+
+
 .. note::
   For more information, please see the `summary slides <https://www.energy.gov/sites/prod/files/2019/05/f63/T5%20-%20Haupt_0.pdf>`_ provied by Sue Haupt.
+
+

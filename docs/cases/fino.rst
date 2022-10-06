@@ -65,7 +65,7 @@ An advantage of the internal-coupled case is that there is no fetch region where
 Because of that, we can use the whole domain for analysis, with the underlying assumptions that the flowfield is 
 horizontally homogeneous. The horizontal mean of the LES matches mesoscale profiles, so this method should be used only
 when the horizontal gradients in the mesoscale flow are small.  The resolved turbulence in the microscale is not forced
-with the mesocale forcing term, but it does react to the mean conditions the forcing imposes.
+with the mesoscale forcing term, but it does react to the mean conditions the forcing imposes.
 
 .. admonition::  SOWFA Setup Available
 
@@ -98,7 +98,7 @@ properly formed state.
 Boundary-Coupled Mesoscale to Microscale: WRF-Mesoscale to WRF-LES, Mann Synthetic Turbulence
 ---------------------------------------------------------------------------------------------
 
-This last case couples a mesoscale model with a microscale model all within one code, WRF.  The finest simulaton nests
+This last case couples a mesoscale model with a microscale model all within one code, WRF.  The finest simulation nests
 are treated with LES, whereas the coarser nests use typical mesoscale turbulence modeling.  Coupling of information is through
 nest boundaries, so similar to the previous WRF to SOWFA boundary-coupled case, but all within a single code.
 
@@ -126,7 +126,7 @@ Boundary-Coupled Mesoscale to Microscale: WRF-Mesoscale to WRF-LES, Control
 Data Sources
 ============
 
-The miscroscale simulations in both WRF and SOWFA uses mesoscale data produced by WRF. WRF mesoscale case, on the other hand, uses the aforementioned ERA5 reanalysis data.
+The microscale simulations in both WRF and SOWFA uses mesoscale data produced by WRF. WRF mesoscale case, on the other hand, uses the aforementioned ERA5 reanalysis data.
 
 
 HPC Runtime information
@@ -205,7 +205,7 @@ The period of interest for this case is 4-hour interval between 01Z and 04Z on M
 
        Ten-minute mean vertical profile comparison across the different codes and techniques. Dots represent observation data.
 
-A snapshot of the instantaneous flowfield is shown in :numref:`fig-fino_all_horizontalSlices_3x3`. The figure shows a 3-by-3 km submdomain region focused on the Southeast corner of the domain, leaving out the fetch region.
+A snapshot of the instantaneous flowfield is shown in :numref:`fig-fino_all_horizontalSlices_3x3`. The figure shows a 3-by-3 km subdomain region focused on the Southeast corner of the domain, leaving out the fetch region.
 
     .. _fig-fino_all_horizontalSlices_3x3:
     .. figure:: ../img/fino_all_horizontalSlices_3x3.png

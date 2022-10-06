@@ -30,7 +30,7 @@ Additional details about this WFIP2 CAP study may be found in the original repor
 Model Setup
 -----------
 This study utilizes two nested domains (one-way coupling) with ∆x,y = 3 km in the outer domain (d01) and 750 m in the inner domain (d02) (:numref:`fig-WFIP2-domains`).
-Domains 1 and 2 are both mesoscale domains, i.e. they both use a PBL parameterization.
+Domains 1 and 2 are both mesoscale domains, i.e., they both use a PBL parameterization.
 The vertical grid is consistent across both domains with 50 levels and ∆z ≈ 15 m near the surface before stretching above.
 
   .. _fig-WFIP2-domains:
@@ -40,8 +40,11 @@ The vertical grid is consistent across both domains with 50 levels and ∆z ≈ 
 
     WRF domain setup for the 10-day CAP event: HRRR (d01) and HRRRNEST (d02) are shown in the left and right panels. In d02, the locations of various WFIP2 measurement sites are shown by the red markers. This image is reproduced from :cite:t:`Arthur2022` (their Fig. 1).
 
-.. attention::
-  **The WRF setup has not been uploaded to GitHub yet. This is expected soon...**
+.. admonition::
+   WRF Setup Available
+
+   The WRF setup (including namelists and auxiliary input data) is available on the `WRF-setups
+   repository of the A2e-MMC GitHub <https://github.com/a2e-mmc/WRF-setups/tree/master/WFIP2/3DPBL_Cold_Pool>`_.
 
 The outer domain is initialized using the operational Rapid Refresh (RAP) model.
 Reforecast simulations using the HRRR and HRRRNEST setup are conducted every 12 hours from 00 UTC 10 January 2017 through 12 UTC 19 January 2017 and integrated for 24 hours each.
@@ -165,7 +168,7 @@ The error metrics for event-averaged wind speed are summarized in :numref:`fig-w
 Comparing Cases #2 and 3 , it is evident that the more comprehensive turbulence mixing parameterization (Case #3, 3D PBL) tends to produce the most accurate forecast at nearly every site and for both error metrics.
 
 
-An important component of any turbulence kinetic energy (TKE)-based PBL parameterization is the computation of the eddy diffusivity, which dictates the strength of turbulent mixing and depends upon the magnitute of TKE.
+An important component of any turbulence kinetic energy (TKE)-based PBL parameterization is the computation of the eddy diffusivity, which dictates the strength of turbulent mixing and depends upon the magnitude of TKE.
 To evaluate the performance of MYNN (Case #2) and 3D PBL (Case #3) with respect to TKE prediction, the bias is computed at Gordon's Ridge and shown in :numref:`fig-tke-bias`.
 
 
@@ -178,7 +181,7 @@ To evaluate the performance of MYNN (Case #2) and 3D PBL (Case #3) with respect 
 
 
 The overall TKE model biases tend to be negative (underestimation in TKE) for both Cases #2 and 3.
-However, the postitive biases are reduced substantially when using the 3D PBL parameterization.
+However, the positive biases are reduced substantially when using the 3D PBL parameterization.
 The reason for this improvement in TKE prediction is primarily due to the different length scale formulations between MYNN and 3D PBL.
 Further details regarding the observed and modeled turbulence characteristics from this CAP event are reported in :cite:t:`Arthur2022`.
 
